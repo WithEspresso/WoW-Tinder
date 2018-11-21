@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */; };
-		BFCDCF9C21A49F5E00C6868D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9B21A49F5E00C6868D /* ViewController.swift */; };
+		BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */; };
 		BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCF9D21A49F5E00C6868D /* Main.storyboard */; };
 		BFCDCFA121A49F6000C6868D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCFA021A49F6000C6868D /* Assets.xcassets */; };
 		BFCDCFA421A49F6000C6868D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */; };
 		BFCDCFAF21A49F6000C6868D /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCFAE21A49F6000C6868D /* LoginTests.swift */; };
+		BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCFB921A537BC00C6868D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		BFCDCF9621A49F5D00C6868D /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFCDCF9B21A49F5E00C6868D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		BFCDCF9E21A49F5E00C6868D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFCDCFA021A49F6000C6868D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFCDCFA321A49F6000C6868D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		BFCDCFAA21A49F6000C6868D /* LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCDCFAE21A49F6000C6868D /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		BFCDCFB021A49F6000C6868D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFCDCFB921A537BC00C6868D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */,
-				BFCDCF9B21A49F5E00C6868D /* ViewController.swift */,
+				BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */,
 				BFCDCF9D21A49F5E00C6868D /* Main.storyboard */,
+				BFCDCFB921A537BC00C6868D /* LoginViewController.swift */,
 				BFCDCFA021A49F6000C6868D /* Assets.xcassets */,
 				BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */,
 				BFCDCFA521A49F6000C6868D /* Info.plist */,
@@ -197,7 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFCDCF9C21A49F5E00C6868D /* ViewController.swift in Sources */,
+				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
+				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
