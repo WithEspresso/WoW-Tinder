@@ -30,8 +30,26 @@ class RegistrationViewController: UIViewController {
     //error message for confirmation of matching passwords
     @IBOutlet weak var confirmationError: UILabel!
     
-    //Boolean for if checked age is greater than 18
-    @IBOutlet weak var ageCheck: UISwitch!
+    //boolean for if checkbox is checked
+    var isChecked = false
+    //check box button
+    @IBOutlet weak var checkBox: UIButton!
+    //action if check box is clicked
+    @IBAction func checkClicked(_ sender: UIButton) {
+        //invert bool
+        isChecked = !isChecked
+        
+        //if checked
+        if (isChecked){
+            //set to checked image
+            let img = UIImage(named: "checkBoxFILLED")
+            checkBox.setBackgroundImage(img, for: UIControl.State.normal)
+        } else {
+            //set to unchecked image
+            let img = UIImage(named: "checkBoxOUTLINE")
+            checkBox.setBackgroundImage(img, for: UIControl.State.normal)
+        }
+    }
     
     //Sign up button action
     @IBAction func sign_up(_ sender: UIButton) {
@@ -41,7 +59,7 @@ class RegistrationViewController: UIViewController {
         let enteredEmailAddress = emailAddress.text ?? ""
         let enteredPassword = password.text ?? ""
         let enteredConfirmationPassword = confirmPassword.text ?? ""
-        let didAgeCheck = ageCheck.isOn
+        let didAgeCheck = isChecked
         
         if (enteredPassword == enteredConfirmationPassword){
             confirmationError.text = ""
@@ -66,6 +84,7 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isChecked = false
         // Do any additional setup after loading the view, typically from a nib.
     }
 

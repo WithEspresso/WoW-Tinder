@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Login/LoginViewController.swift"
+            timestampString = "564912823.699273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Login.LoginViewController.username.getter : weak Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/Documents/GitHub/WoW-Tinder/Login/Login/LoginViewController.swift"
+                  timestampString = "564911897.005904"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Login.LoginViewController.username.setter : weak Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/Documents/GitHub/WoW-Tinder/Login/Login/LoginViewController.swift"
+                  timestampString = "564911897.020744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Login.LoginViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Login.LoginViewController"
+                  moduleName = "Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/Documents/GitHub/WoW-Tinder/Login/Login/LoginViewController.swift"
+                  timestampString = "564911897.023311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Login.LoginViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Login.LoginViewController&gt;"
+                  moduleName = "Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/Documents/GitHub/WoW-Tinder/Login/Login/LoginViewController.swift"
+                  timestampString = "564911897.026001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
