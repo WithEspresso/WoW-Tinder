@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF9C683821AE38D300378D3E /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C683721AE38D300378D3E /* MessagingViewController.swift */; };
 		BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */; };
 		BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */; };
 		BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCF9D21A49F5E00C6868D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF9C683721AE38D300378D3E /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		BFCDCF9621A49F5D00C6868D /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				BFCDCFA021A49F6000C6868D /* Assets.xcassets */,
 				BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */,
 				BFCDCFA521A49F6000C6868D /* Info.plist */,
+				AF9C683721AE38D300378D3E /* MessagingViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
+				AF9C683821AE38D300378D3E /* MessagingViewController.swift in Sources */,
 				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
 			);
@@ -367,6 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = Login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = Login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = LoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = LoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
