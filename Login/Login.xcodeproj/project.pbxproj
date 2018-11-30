@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF22739721B0F7B7002EF797 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BF22739621B0F7B7002EF797 /* Fonts */; };
 		BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */; };
 		BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */; };
 		BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCF9D21A49F5E00C6868D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF22739621B0F7B7002EF797 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		BFCDCF9621A49F5D00C6868D /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */,
 				BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */,
 				BFCDCF9D21A49F5E00C6868D /* Main.storyboard */,
+				BF22739621B0F7B7002EF797 /* Fonts */,
 				BFCDCFB921A537BC00C6868D /* LoginViewController.swift */,
 				BFCDCFA021A49F6000C6868D /* Assets.xcassets */,
 				BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */,
@@ -183,6 +186,7 @@
 				BFCDCFA421A49F6000C6868D /* LaunchScreen.storyboard in Resources */,
 				BFCDCFA121A49F6000C6868D /* Assets.xcassets in Resources */,
 				BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */,
+				BF22739721B0F7B7002EF797 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
