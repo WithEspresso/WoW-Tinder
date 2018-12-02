@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */; };
 		BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */; };
+		BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2273A221B35F51002EF797 /* SwipeViewController.swift */; };
 		BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */; };
 		BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */; };
 		BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDCF9D21A49F5E00C6868D /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		BF2273A221B35F51002EF797 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		BFCDCF9621A49F5D00C6868D /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */,
 				BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */,
 				BFCDCF9D21A49F5E00C6868D /* Main.storyboard */,
+				BF2273A221B35F51002EF797 /* SwipeViewController.swift */,
 				BFCDCFB921A537BC00C6868D /* LoginViewController.swift */,
 				BFCDCFA021A49F6000C6868D /* Assets.xcassets */,
 				BF22739D21B226C5002EF797 /* Fonts */,
@@ -219,6 +222,7 @@
 				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
 				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
+				BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
