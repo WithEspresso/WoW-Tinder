@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B031E4CA21B484CD0047E4B4 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031E4C921B484CD0047E4B4 /* SwipeView.swift */; };
+		B031E4CE21B48CA60047E4B4 /* swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031E4CD21B48CA60047E4B4 /* swipeable.swift */; };
 		BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */; };
 		BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */; };
 		BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2273A221B35F51002EF797 /* SwipeViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B031E4C921B484CD0047E4B4 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		B031E4CD21B48CA60047E4B4 /* swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeable.swift; sourceTree = "<group>"; };
 		BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		BF2273A221B35F51002EF797 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				BF22739D21B226C5002EF797 /* Fonts */,
 				BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */,
 				BFCDCFA521A49F6000C6868D /* Info.plist */,
+				B031E4C921B484CD0047E4B4 /* SwipeView.swift */,
+				B031E4CD21B48CA60047E4B4 /* swipeable.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 			files = (
 				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
 				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
+				B031E4CE21B48CA60047E4B4 /* swipeable.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
+				B031E4CA21B484CD0047E4B4 /* SwipeView.swift in Sources */,
 				BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = LoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFRSVXQR27;
 				INFOPLIST_FILE = LoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
