@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oy4-e7-682">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -140,7 +140,6 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Reject"/>
                                         <connections>
-                                            <action selector="Dislike:" destination="Oy4-e7-682" eventType="touchUpInside" id="fYE-gT-eTi"/>
                                             <action selector="dislike:" destination="Oy4-e7-682" eventType="touchUpInside" id="qgQ-Jd-Mop"/>
                                         </connections>
                                     </button>
@@ -446,4 +445,7 @@
         <image name="Sign Up" width="1098" height="294"/>
         <image name="checkBoxOUTLINE" width="22" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NmA-Cf-aMB"/>
+    </inferredMetricsTieBreakers>
 </document>
