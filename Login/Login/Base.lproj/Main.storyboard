@@ -166,6 +166,7 @@
                                         <state key="normal" backgroundImage="Messaging"/>
                                         <connections>
                                             <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="nZs-q3-Hup"/>
+                                            <segue destination="4Te-2a-1Ds" kind="show" id="uFi-aN-Scw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoE-Jo-RTu">
@@ -240,6 +241,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mug-dm-2mV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949.27536231884062" y="101.08695652173914"/>
+        </scene>
+        <!--Contacts Table View Controller-->
+        <scene sceneID="7wA-od-8ks">
+            <objects>
+                <tableViewController id="4Te-2a-1Ds" customClass="ContactsTableViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2JZ-mi-wgh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="3hd-6E-cf5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-Nm-cgg">
+                                    <rect key="frame" x="8" y="0.0" width="79" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="iM1-Nm-cgg" secondAttribute="height" multiplier="79:60" id="2F1-FD-u3M"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="Messaging"/>
+                                    <connections>
+                                        <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="N3b-iY-mu4"/>
+                                        <segue destination="Oy4-e7-682" kind="show" id="Pza-Vh-Hkf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="leading" secondItem="3hd-6E-cf5" secondAttribute="leading" constant="8" id="K2s-8A-RdM"/>
+                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="width" secondItem="iM1-Nm-cgg" secondAttribute="height" multiplier="79:60" id="np8-0S-hKz"/>
+                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="top" secondItem="3hd-6E-cf5" secondAttribute="top" id="oQF-Wy-84i"/>
+                                <constraint firstAttribute="bottom" secondItem="iM1-Nm-cgg" secondAttribute="bottom" constant="22" id="u6a-KY-Mjk"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xFf-qE-TbY">
+                                <rect key="frame" x="0.0" y="110" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xFf-qE-TbY" id="qxR-8P-0Oo" customClass="ContactCell" customModule="Login" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-u3-eIk">
+                                            <rect key="frame" x="364" y="-52" width="50" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="WMJ-5y-OCc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nzn-u3-eIk" firstAttribute="trailing" secondItem="qxR-8P-0Oo" secondAttribute="trailingMargin" id="0iH-TH-OHH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nzn-u3-eIk" secondAttribute="bottom" constant="-43" id="kfs-ac-udp"/>
+                                        <constraint firstItem="nzn-u3-eIk" firstAttribute="top" secondItem="qxR-8P-0Oo" secondAttribute="topMargin" constant="-63" id="ygu-8o-Rkn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Te-2a-1Ds" id="Tft-Xz-jDA"/>
+                            <outlet property="delegate" destination="4Te-2a-1Ds" id="Aat-9y-Sqk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKr-eH-FZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.8840579710147" y="99.456521739130437"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="3mh-aN-YyH">
@@ -445,4 +511,7 @@
         <image name="Sign Up" width="1098" height="294"/>
         <image name="checkBoxOUTLINE" width="22" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NmA-Cf-aMB"/>
+    </inferredMetricsTieBreakers>
 </document>

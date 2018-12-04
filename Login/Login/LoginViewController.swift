@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
         print(enteredPassword)
         
         //Auth.auth.sign_in(withEmail: enteredUsername, password: enteredPassword) { (user, error)} in {
-            
         }
     
 }

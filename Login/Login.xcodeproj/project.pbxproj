@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AF896A3021B6064300497394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF896A2F21B6064200497394 /* GoogleService-Info.plist */; };
+		AF896A3221B6074E00497394 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A3121B6074E00497394 /* ContactsTableViewController.swift */; };
+		AF896A3421B6122900497394 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A3321B6122900497394 /* MessagingViewController.swift */; };
+		AF896A3621B612D500497394 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A3521B612D500497394 /* Constants.swift */; };
+		AF896A3821B612FE00497394 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A3721B612FE00497394 /* ContactCell.swift */; };
+		AF896A3A21B6152B00497394 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A3921B6152B00497394 /* Contact.swift */; };
 		AF8EC28621B36A440089CA0A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC28421B36A440089CA0A /* Podfile */; };
 		BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */; };
 		BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */; };
@@ -37,6 +42,11 @@
 		30ADDD1DB89F04F7CFF6934C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		4C89743A626198AACBF2C5FB /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		AF896A2F21B6064200497394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF896A3121B6074E00497394 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		AF896A3321B6122900497394 /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
+		AF896A3521B612D500497394 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF896A3721B612FE00497394 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		AF896A3921B6152B00497394 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AF8EC28421B36A440089CA0A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF8EC28521B36A440089CA0A /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-header.h"; sourceTree = "<group>"; };
 		BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
@@ -126,6 +136,11 @@
 				BF22739D21B226C5002EF797 /* Fonts */,
 				BFCDCFA221A49F6000C6868D /* LaunchScreen.storyboard */,
 				BFCDCFA521A49F6000C6868D /* Info.plist */,
+				AF896A3121B6074E00497394 /* ContactsTableViewController.swift */,
+				AF896A3321B6122900497394 /* MessagingViewController.swift */,
+				AF896A3521B612D500497394 /* Constants.swift */,
+				AF896A3721B612FE00497394 /* ContactCell.swift */,
+				AF896A3921B6152B00497394 /* Contact.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -312,10 +327,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF896A3A21B6152B00497394 /* Contact.swift in Sources */,
+				AF896A3821B612FE00497394 /* ContactCell.swift in Sources */,
 				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
 				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
+				AF896A3221B6074E00497394 /* ContactsTableViewController.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
+				AF896A3621B612D500497394 /* Constants.swift in Sources */,
 				BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */,
+				AF896A3421B6122900497394 /* MessagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
