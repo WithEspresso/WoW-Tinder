@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF8EC27821B36A170089CA0A /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8EC26521B36A170089CA0A /* LoginTests.swift */; };
-		AF8EC27921B36A170089CA0A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC26621B36A170089CA0A /* Info.plist */; };
-		AF8EC27A21B36A170089CA0A /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8EC26B21B36A170089CA0A /* SwipeViewController.swift */; };
-		AF8EC27B21B36A170089CA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC26C21B36A170089CA0A /* Assets.xcassets */; };
-		AF8EC27C21B36A170089CA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC26D21B36A170089CA0A /* LaunchScreen.storyboard */; };
-		AF8EC27D21B36A170089CA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC26F21B36A170089CA0A /* Main.storyboard */; };
-		AF8EC27E21B36A170089CA0A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8EC27121B36A170089CA0A /* LoginViewController.swift */; };
-		AF8EC27F21B36A170089CA0A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8EC27221B36A170089CA0A /* RegistrationViewController.swift */; };
-		AF8EC28021B36A170089CA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8EC27321B36A170089CA0A /* AppDelegate.swift */; };
-		AF8EC28121B36A170089CA0A /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC27521B36A170089CA0A /* MontserratAlternates-Bold.ttf */; };
-		AF8EC28221B36A170089CA0A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC27621B36A170089CA0A /* Montserrat-Regular.ttf */; };
-		AF8EC28321B36A170089CA0A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC27721B36A170089CA0A /* Info.plist */; };
 		AF8EC28621B36A440089CA0A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC28421B36A440089CA0A /* Podfile */; };
 		BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */; };
 		BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */; };
@@ -47,19 +35,6 @@
 		040019DD31AF3509E83A2F3C /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30ADDD1DB89F04F7CFF6934C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		4C89743A626198AACBF2C5FB /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
-		AF8EC26521B36A170089CA0A /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
-		AF8EC26621B36A170089CA0A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF8EC26721B36A170089CA0A /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Login.xcodeproj; sourceTree = "<group>"; };
-		AF8EC26B21B36A170089CA0A /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
-		AF8EC26C21B36A170089CA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF8EC26E21B36A170089CA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AF8EC27021B36A170089CA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF8EC27121B36A170089CA0A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AF8EC27221B36A170089CA0A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		AF8EC27321B36A170089CA0A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF8EC27521B36A170089CA0A /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
-		AF8EC27621B36A170089CA0A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		AF8EC27721B36A170089CA0A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8EC28421B36A440089CA0A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		AF8EC28521B36A440089CA0A /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-header.h"; sourceTree = "<group>"; };
 		BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
@@ -105,57 +80,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF8EC26321B36A170089CA0A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				AF8EC26421B36A170089CA0A /* LoginTests */,
-				AF8EC26721B36A170089CA0A /* Login.xcodeproj */,
-				AF8EC26A21B36A170089CA0A /* Login */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		AF8EC26421B36A170089CA0A /* LoginTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF8EC26521B36A170089CA0A /* LoginTests.swift */,
-				AF8EC26621B36A170089CA0A /* Info.plist */,
-			);
-			path = LoginTests;
-			sourceTree = "<group>";
-		};
-		AF8EC26821B36A170089CA0A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AF8EC26A21B36A170089CA0A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				AF8EC26B21B36A170089CA0A /* SwipeViewController.swift */,
-				AF8EC26C21B36A170089CA0A /* Assets.xcassets */,
-				AF8EC26D21B36A170089CA0A /* LaunchScreen.storyboard */,
-				AF8EC26F21B36A170089CA0A /* Main.storyboard */,
-				AF8EC27121B36A170089CA0A /* LoginViewController.swift */,
-				AF8EC27221B36A170089CA0A /* RegistrationViewController.swift */,
-				AF8EC27321B36A170089CA0A /* AppDelegate.swift */,
-				AF8EC27421B36A170089CA0A /* Fonts */,
-				AF8EC27721B36A170089CA0A /* Info.plist */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		AF8EC27421B36A170089CA0A /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AF8EC27521B36A170089CA0A /* MontserratAlternates-Bold.ttf */,
-				AF8EC27621B36A170089CA0A /* Montserrat-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		BF22739D21B226C5002EF797 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +95,6 @@
 				AF8EC28521B36A440089CA0A /* Bridging-header.h */,
 				AF8EC28421B36A440089CA0A /* Podfile */,
 				BFCDCF9821A49F5D00C6868D /* Login */,
-				AF8EC26321B36A170089CA0A /* Login */,
 				BFCDCFAD21A49F6000C6868D /* LoginTests */,
 				BFCDCF9721A49F5D00C6868D /* Products */,
 				F7C9071AA3C11BCFB1E622F2 /* Pods */,
@@ -292,12 +215,6 @@
 			mainGroup = BFCDCF8D21A49F5D00C6868D;
 			productRefGroup = BFCDCF9721A49F5D00C6868D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = AF8EC26821B36A170089CA0A /* Products */;
-					ProjectRef = AF8EC26721B36A170089CA0A /* Login.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				BFCDCF9521A49F5D00C6868D /* Login */,
@@ -312,18 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFCDCFA421A49F6000C6868D /* LaunchScreen.storyboard in Resources */,
-				AF8EC28221B36A170089CA0A /* Montserrat-Regular.ttf in Resources */,
-				AF8EC27C21B36A170089CA0A /* LaunchScreen.storyboard in Resources */,
 				BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */,
-				AF8EC27921B36A170089CA0A /* Info.plist in Resources */,
 				BFCDCFA121A49F6000C6868D /* Assets.xcassets in Resources */,
-				AF8EC27B21B36A170089CA0A /* Assets.xcassets in Resources */,
-				AF8EC27D21B36A170089CA0A /* Main.storyboard in Resources */,
-				AF8EC28321B36A170089CA0A /* Info.plist in Resources */,
 				AF8EC28621B36A440089CA0A /* Podfile in Resources */,
 				BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */,
 				BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */,
-				AF8EC28121B36A170089CA0A /* MontserratAlternates-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,15 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8EC27E21B36A170089CA0A /* LoginViewController.swift in Sources */,
 				BFCDCFBA21A537BC00C6868D /* LoginViewController.swift in Sources */,
-				AF8EC27F21B36A170089CA0A /* RegistrationViewController.swift in Sources */,
-				AF8EC28021B36A170089CA0A /* AppDelegate.swift in Sources */,
 				BFCDCF9C21A49F5E00C6868D /* RegistrationViewController.swift in Sources */,
 				BFCDCF9A21A49F5E00C6868D /* AppDelegate.swift in Sources */,
-				AF8EC27821B36A170089CA0A /* LoginTests.swift in Sources */,
 				BF2273A321B35F51002EF797 /* SwipeViewController.swift in Sources */,
-				AF8EC27A21B36A170089CA0A /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,22 +334,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF8EC26D21B36A170089CA0A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF8EC26E21B36A170089CA0A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		AF8EC26F21B36A170089CA0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF8EC27021B36A170089CA0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BFCDCF9D21A49F5E00C6868D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
