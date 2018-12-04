@@ -48,18 +48,41 @@ class SwipeView:UIView{
     }
     
     @objc func panRecognized(_ gestureRecognizer: UIPanGestureRecognizer){
-        panGT = gestureRecognizer.translation(in: self)
+//        panGT = gestureRecognizer.translation(in: self)
+        let leashPoint = CGPoint(x: self.superview!.center.x, y: self.superview!.center.y * 0.67)
         
         switch gestureRecognizer.state {
         case .began:
             print("begin")
             
         case .changed:
-            print("changed")
+            
+            let translation = gestureRecognizer.translation(in: self)
+            
+            self.center = CGPoint(x: self.center.x + translation.x, y: self.center.y + translation.y)
+            gestureRecognizer.setTranslation(CGPoint.zero, in: self)
             
         case .ended:
-           print("ended")
+//           print(self.center)
+           if( self.center.y > 400) {
+            print("bottom")
+            self.center = leashPoint
             
+           }else if( self.center.x < 20){
+            print("left")
+            self.center = leashPoint
+            
+           }else if( self.center.x > 300){
+            print("right")
+            self.center = leashPoint
+            
+           }
+           else{
+                self.center = leashPoint
+                print("reset")
+            }
+            
+           
         default:
             print("default")
         }

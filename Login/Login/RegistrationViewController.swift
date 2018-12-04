@@ -43,11 +43,11 @@ class RegistrationViewController: UIViewController {
         if (isChecked){
             //set to checked image
             let img = UIImage(named: "checkBoxFILLED")
-            checkBox.setBackgroundImage(img, for: UIControl.State.normal)
+            checkBox.setBackgroundImage(img, for: UIControlState.normal)
         } else {
             //set to unchecked image
             let img = UIImage(named: "checkBoxOUTLINE")
-            checkBox.setBackgroundImage(img, for: UIControl.State.normal)
+            checkBox.setBackgroundImage(img, for: UIControlState.normal)
         }
     }
     

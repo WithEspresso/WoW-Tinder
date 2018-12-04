@@ -21,7 +21,7 @@ extension Swipeable where Self: UIPanGestureRecognizer {
         switch state {
         case .changed:
             let translation = self.translation(in: view.superview)
-            view.transform = transform(view: view, for: translation)
+            view.transform = self.transform(view: view, for: translation)
         case .ended:
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: [], animations: {
                 view.transform = .identity
