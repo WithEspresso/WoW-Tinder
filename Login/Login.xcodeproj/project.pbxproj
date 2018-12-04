@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF896A3021B6064300497394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF896A2F21B6064200497394 /* GoogleService-Info.plist */; };
 		AF8EC28621B36A440089CA0A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AF8EC28421B36A440089CA0A /* Podfile */; };
 		BF2273A021B226DC002EF797 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */; };
 		BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */; };
@@ -35,7 +36,8 @@
 		040019DD31AF3509E83A2F3C /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30ADDD1DB89F04F7CFF6934C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		4C89743A626198AACBF2C5FB /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
-		AF8EC28421B36A440089CA0A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AF896A2F21B6064200497394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF8EC28421B36A440089CA0A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF8EC28521B36A440089CA0A /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-header.h"; sourceTree = "<group>"; };
 		BF22739E21B226DB002EF797 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		BF22739F21B226DB002EF797 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		BFCDCF8D21A49F5D00C6868D = {
 			isa = PBXGroup;
 			children = (
+				AF896A2F21B6064200497394 /* GoogleService-Info.plist */,
 				AF8EC28521B36A440089CA0A /* Bridging-header.h */,
 				AF8EC28421B36A440089CA0A /* Podfile */,
 				BFCDCF9821A49F5D00C6868D /* Login */,
@@ -234,6 +237,7 @@
 				AF8EC28621B36A440089CA0A /* Podfile in Resources */,
 				BF2273A121B226DC002EF797 /* Montserrat-Regular.ttf in Resources */,
 				BFCDCF9F21A49F5E00C6868D /* Main.storyboard in Resources */,
+				AF896A3021B6064300497394 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

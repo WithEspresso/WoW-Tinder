@@ -25,16 +25,8 @@ class LoginViewController: UIViewController {
         print(enteredUsername)
         print(enteredPassword)
         
-        Auth.auth.sign_in(withEmail: enteredUsername, password: enteredPassword) { (user, error)} in {
+        //Auth.auth.sign_in(withEmail: enteredUsername, password: enteredPassword) { (user, error)} in {
             
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     
 }
