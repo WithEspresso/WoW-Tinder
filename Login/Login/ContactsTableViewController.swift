@@ -8,16 +8,17 @@
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
-
+class ContactsTableViewController: UITableViewController, contactToMessengerDelegate {
+    
     var contacts:[Contact] = []
+    var selected: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(ContactCell.self, forCellReuseIdentifier: "contactCell")
         retreiveContacts()
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -51,6 +52,32 @@ class ContactsTableViewController: UITableViewController {
             NSLog(contact.contactName! + contact.characterClass!)
         }
     }
+    
+    /*
+     Gets selected item,
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected = contacts[indexPath.row].getName()
+        performSegue(withIdentifier: "messengerTransition", sender: self)
+    }
+    
+    /*
+     Segues into the other view controller with the desired contact to message.
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MessagingViewController {
+            destination.recipient = selected
+            destination.delegate = self
+        }
+    }
+    
+    /*
+     Removes the contact from the currently logged in user's list of matches from the database.
+     */
+    func removeContact(contact: String) {
+        
+    }
+    
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

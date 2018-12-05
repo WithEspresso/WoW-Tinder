@@ -9,9 +9,20 @@
 import UIKit
 import JSQMessagesViewController
 
+/*
+ Delegate for ContactsTableViewController to pass information to the MessagingViewController.
+ */
+protocol contactToMessengerDelegate {
+    func removeContact(contact: String)
+}
+
 class MessagingViewController: JSQMessagesViewController {
     
+    var delegate : contactToMessengerDelegate! = nil
     var messages = [JSQMessage]();
+    var recipient: String?
+    
+    var contactMessengerDelegate : contactToMessengerDelegate! = nil
     
     // Creates outgoing bubble with lazy evaluation
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
