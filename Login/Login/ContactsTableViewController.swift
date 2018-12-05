@@ -65,8 +65,8 @@ class ContactsTableViewController: UITableViewController, contactToMessengerDele
      Segues into the other view controller with the desired contact to message.
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? MessagingViewController {
-            destination.recipient = selected
+        if let destination = segue.destination as? MessagingParentViewController {
+            destination.contactName = selected
             destination.delegate = self
         }
     }

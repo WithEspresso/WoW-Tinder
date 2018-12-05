@@ -9,20 +9,10 @@
 import UIKit
 import JSQMessagesViewController
 
-/*
- Delegate for ContactsTableViewController to pass information to the MessagingViewController.
- */
-protocol contactToMessengerDelegate {
-    func removeContact(contact: String)
-}
-
-class MessagingViewController: JSQMessagesViewController {
+class MessagingChildViewController: JSQMessagesViewController {
     
-    var delegate : contactToMessengerDelegate! = nil
+    var dataSource : String?
     var messages = [JSQMessage]();
-    var recipient: String?
-    
-    var contactMessengerDelegate : contactToMessengerDelegate! = nil
     
     // Creates outgoing bubble with lazy evaluation
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
@@ -34,7 +24,9 @@ class MessagingViewController: JSQMessagesViewController {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
     }()
     
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         // Hard coded for testing purposes
@@ -63,34 +55,41 @@ class MessagingViewController: JSQMessagesViewController {
             }
         })
     }
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData!
+    {
         return messages[indexPath.item]
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         return messages.count
     }
     
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource!
+    {
         return messages[indexPath.item].senderId == senderId ? outgoingBubble: incomingBubble
     }
     
     // Hides avatars for chat bubbles
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource!
+    {
         return nil
     }
     
     // Sets the name label for chat bubbles
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString!
+    {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
     }
     
     // Set height
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) ->CGFloat {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) ->CGFloat
+    {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
     
-    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
+    {
         let ref = Constants.refs.databaseChats.childByAutoId()
         let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
         ref.setValue(message)

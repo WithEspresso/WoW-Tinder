@@ -254,23 +254,24 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-Nm-cgg">
-                                    <rect key="frame" x="8" y="0.0" width="79" height="60"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix3-mC-sKy">
+                                    <rect key="frame" x="18" y="10" width="79" height="60"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="iM1-Nm-cgg" secondAttribute="height" multiplier="79:60" id="2F1-FD-u3M"/>
+                                        <constraint firstAttribute="width" secondItem="ix3-mC-sKy" secondAttribute="height" multiplier="79:60" id="f8E-EK-n8J"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="Messaging"/>
                                     <connections>
-                                        <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="N3b-iY-mu4"/>
+                                        <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="wqs-dq-eXB"/>
+                                        <segue destination="Oy4-e7-682" kind="show" id="tFa-p9-VHw"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="leading" secondItem="3hd-6E-cf5" secondAttribute="leading" constant="8" id="K2s-8A-RdM"/>
-                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="width" secondItem="iM1-Nm-cgg" secondAttribute="height" multiplier="79:60" id="np8-0S-hKz"/>
-                                <constraint firstItem="iM1-Nm-cgg" firstAttribute="top" secondItem="3hd-6E-cf5" secondAttribute="top" id="oQF-Wy-84i"/>
-                                <constraint firstAttribute="bottom" secondItem="iM1-Nm-cgg" secondAttribute="bottom" constant="22" id="u6a-KY-Mjk"/>
+                                <constraint firstItem="ix3-mC-sKy" firstAttribute="width" secondItem="ix3-mC-sKy" secondAttribute="height" multiplier="79:60" id="2Mm-cT-u0g"/>
+                                <constraint firstAttribute="bottom" secondItem="ix3-mC-sKy" secondAttribute="bottom" constant="12" id="3zn-xn-afj"/>
+                                <constraint firstItem="ix3-mC-sKy" firstAttribute="leading" secondItem="3hd-6E-cf5" secondAttribute="leading" constant="18" id="qiU-dS-0xs"/>
+                                <constraint firstItem="ix3-mC-sKy" firstAttribute="top" secondItem="3hd-6E-cf5" secondAttribute="top" constant="10" id="vPo-GI-IEI"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -309,45 +310,70 @@
             </objects>
             <point key="canvasLocation" x="2031.8840579710147" y="99.456521739130437"/>
         </scene>
-        <!--Messaging View Controller-->
+        <!--Messaging Parent View Controller-->
         <scene sceneID="RAH-kW-ebp">
             <objects>
-                <viewController id="HCX-AY-eDD" customClass="MessagingViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCX-AY-eDD" customClass="MessagingParentViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E88-P1-bIf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-1y-D7U">
-                                <rect key="frame" x="0.0" y="20" width="414" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-1y-D7U">
+                                <rect key="frame" x="0.0" y="20" width="414" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLy-MZ-tgy">
+                                        <rect key="frame" x="186" y="35" width="42" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37E-fr-Cyl">
+                                        <rect key="frame" x="20" y="12" width="81" height="65"/>
+                                        <state key="normal" backgroundImage="Messaging"/>
+                                        <connections>
+                                            <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="rHk-hH-grL"/>
+                                            <segue destination="4Te-2a-1Ds" kind="show" id="Auo-xg-qMc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgf-fs-hJI">
-                                <rect key="frame" x="10" y="30" width="79" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Lgf-fs-hJI" secondAttribute="height" multiplier="79:60" id="kfn-tk-pZ3"/>
+                                    <constraint firstItem="jLy-MZ-tgy" firstAttribute="leading" secondItem="37E-fr-Cyl" secondAttribute="trailing" constant="85" id="0Zf-nu-e0R"/>
+                                    <constraint firstItem="jLy-MZ-tgy" firstAttribute="centerX" secondItem="FTE-1y-D7U" secondAttribute="centerX" id="1pJ-N1-tgS"/>
+                                    <constraint firstItem="37E-fr-Cyl" firstAttribute="bottom" secondItem="FTE-1y-D7U" secondAttribute="bottomMargin" id="6bd-K1-UOx"/>
+                                    <constraint firstItem="jLy-MZ-tgy" firstAttribute="top" secondItem="FTE-1y-D7U" secondAttribute="top" constant="35" id="CTb-hS-9cr"/>
+                                    <constraint firstItem="37E-fr-Cyl" firstAttribute="centerY" secondItem="jLy-MZ-tgy" secondAttribute="centerY" id="Tn0-Pd-Hw7"/>
+                                    <constraint firstItem="37E-fr-Cyl" firstAttribute="leading" secondItem="FTE-1y-D7U" secondAttribute="leading" constant="20" id="k4N-Kc-D7Y"/>
+                                    <constraint firstItem="37E-fr-Cyl" firstAttribute="top" secondItem="FTE-1y-D7U" secondAttribute="top" constant="12" id="ox9-XV-uyp"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Messaging"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-VU-w0R">
+                                <rect key="frame" x="20" y="133" width="374" height="583"/>
                                 <connections>
-                                    <action selector="goToMessages:" destination="Oy4-e7-682" eventType="touchUpInside" id="HZu-yQ-typ"/>
-                                    <segue destination="4Te-2a-1Ds" kind="show" id="69s-bz-te7"/>
+                                    <segue destination="Ag6-rg-Mtn" kind="embed" identifier="embedChildSegue" id="HFe-VY-CVR"/>
                                 </connections>
-                            </button>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Lgf-fs-hJI" firstAttribute="width" secondItem="Lgf-fs-hJI" secondAttribute="height" multiplier="79:60" id="6Kd-7h-urM"/>
-                            <constraint firstItem="b4U-bZ-SXU" firstAttribute="bottom" secondItem="Lgf-fs-hJI" secondAttribute="bottom" constant="646" id="FJn-XS-GJ2"/>
-                            <constraint firstItem="Lgf-fs-hJI" firstAttribute="leading" secondItem="b4U-bZ-SXU" secondAttribute="leading" constant="10" id="Tm2-DL-Hxq"/>
-                            <constraint firstItem="Lgf-fs-hJI" firstAttribute="top" secondItem="b4U-bZ-SXU" secondAttribute="top" constant="10" id="sbD-Q9-fcV"/>
-                            <constraint firstItem="Lgf-fs-hJI" firstAttribute="width" secondItem="Lgf-fs-hJI" secondAttribute="height" multiplier="79:60" id="ygQ-4S-Ftk"/>
+                            <constraint firstAttribute="trailing" secondItem="FTE-1y-D7U" secondAttribute="trailing" id="8H7-ii-PZe"/>
+                            <constraint firstItem="FTE-1y-D7U" firstAttribute="top" secondItem="b4U-bZ-SXU" secondAttribute="top" id="IwJ-eq-V3W"/>
+                            <constraint firstAttribute="bottom" secondItem="FTE-1y-D7U" secondAttribute="bottom" constant="631" id="UN3-YF-q9E"/>
+                            <constraint firstItem="WXu-VU-w0R" firstAttribute="top" secondItem="FTE-1y-D7U" secondAttribute="bottom" constant="28" id="cdM-zl-ogG"/>
+                            <constraint firstItem="FTE-1y-D7U" firstAttribute="leading" secondItem="E88-P1-bIf" secondAttribute="leading" id="eyw-0O-q9C"/>
+                            <constraint firstItem="WXu-VU-w0R" firstAttribute="leading" secondItem="E88-P1-bIf" secondAttribute="leadingMargin" id="hQ2-iV-LjH"/>
+                            <constraint firstAttribute="bottom" secondItem="WXu-VU-w0R" secondAttribute="bottom" constant="20" symbolic="YES" id="qCb-3X-w0o"/>
+                            <constraint firstItem="WXu-VU-w0R" firstAttribute="centerX" secondItem="FTE-1y-D7U" secondAttribute="centerX" id="zia-m8-rQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b4U-bZ-SXU"/>
                     </view>
+                    <connections>
+                        <outlet property="contactNameLabel" destination="jLy-MZ-tgy" id="I2V-de-1mX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7Z-dq-oRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923.1884057971015" y="94.565217391304358"/>
+            <point key="canvasLocation" x="2921.739130434783" y="94.565217391304358"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="3mh-aN-YyH">
@@ -538,6 +564,20 @@
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="876.35869565217399"/>
         </scene>
+        <!--Messaging Child View Controller-->
+        <scene sceneID="F2c-ks-9rE">
+            <objects>
+                <viewController id="Ag6-rg-Mtn" customClass="MessagingChildViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uf9-Jx-iNI">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="583"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxD-9k-l7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3857" y="95"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back Arrow" width="332" height="628"/>
@@ -555,6 +595,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NmA-Cf-aMB"/>
-        <segue reference="69s-bz-te7"/>
+        <segue reference="Auo-xg-qMc"/>
     </inferredMetricsTieBreakers>
 </document>
