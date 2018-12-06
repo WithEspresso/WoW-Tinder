@@ -1,15 +1,14 @@
 //
-//  LoginTests.swift
-//  LoginTests
+//  PyromanceTests.swift
+//  PyromanceTests
 //
-//  Created by Jimmy Clark on 11/20/18.
-//  Copyright © 2018 James Clark. All rights reserved.
+//  Created by Jimmy Clark on 12/5/18.
 //
 
 import XCTest
-@testable import Login
+@testable import Pyromance
 
-class LoginTests: XCTestCase {
+class PyromanceTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

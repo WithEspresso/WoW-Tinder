@@ -9,7 +9,7 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
-
+    
     //username input field
     @IBOutlet weak var username: UITextField!
     //error message label for username
@@ -87,7 +87,7 @@ class RegistrationViewController: UIViewController {
         isChecked = false
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
 

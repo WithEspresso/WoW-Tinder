@@ -1,6 +1,6 @@
-//
+////
 //  LoginViewController.swift
-//  Login
+//  Pyromance
 //
 //  Created by Jimmy Clark on 11/20/18.
 //  Copyright © 2018 James Clark. All rights reserved.
