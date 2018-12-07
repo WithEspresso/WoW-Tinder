@@ -14,6 +14,7 @@ protocol contactToMessengerDelegate {
 
 class MessagingParentViewController: UIViewController {
 
+
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var messagingContainer: UIView!
     

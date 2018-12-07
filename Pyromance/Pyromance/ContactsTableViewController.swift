@@ -33,7 +33,7 @@ class ContactsTableViewController: UITableViewController, contactToMessengerDele
             let contact = contacts[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell") as! ContactCell
             let contactName:String? = String(contact.getName())
-            let characterClass:String? = String(contact.getCharacterClass())
+            // let characterClass:String? = String(contact.getCharacterClass())
             cell.textLabel?.text = contactName
             return cell
     }
