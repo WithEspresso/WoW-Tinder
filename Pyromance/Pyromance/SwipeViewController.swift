@@ -24,10 +24,21 @@ class SwipeViewController: UIViewController {
     @IBAction func like(_ sender: Any) {
     }
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    var urlKey = URL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
+    let session = URLSession(configuration: .default)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageView.image = UIImage(named: "imageView")
+        if let url = NSURL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg"){
+            if let data = NSData(contentsOf: url as URL){
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.image = UIImage(data: data as Data)
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
