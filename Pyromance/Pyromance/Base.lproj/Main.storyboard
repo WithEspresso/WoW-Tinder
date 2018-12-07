@@ -513,7 +513,8 @@
         <!--Contacts Table View Controller-->
         <scene sceneID="JJb-rq-ThH">
             <objects>
-                <tableViewController id="SQh-e9-nwj" customClass="ContactsTableViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1l-oY-RkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController modalPresentationStyle="pageSheet" id="SQh-e9-nwj" customClass="ContactsTableViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FRp-vg-dOq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -603,7 +604,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k1l-oY-RkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3768.8000000000002" y="151.57421289355324"/>
         </scene>
@@ -691,7 +691,7 @@
         <!--Settings And Edit View Controller-->
         <scene sceneID="gMg-Wv-y4J">
             <objects>
-                <viewController id="fY0-4e-ZIQ" customClass="SettingsAndEditViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fY0-4e-ZIQ" customClass="SettingsAndEditViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1T-2p-Ex0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -856,9 +856,9 @@
         <image name="checkBoxOUTLINE" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PD7-nr-chn"/>
+        <segue reference="Yk6-lE-szO"/>
         <segue reference="yqq-S2-uU6"/>
-        <segue reference="t0Z-JZ-tuV"/>
+        <segue reference="cZJ-Ug-wVP"/>
         <segue reference="y0C-6Z-GjC"/>
     </inferredMetricsTieBreakers>
 </document>
