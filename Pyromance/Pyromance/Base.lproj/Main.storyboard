@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tja-d3-ihC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8R-Kj-T9S">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
         <!--Login View Controller-->
         <scene sceneID="rjF-87-ciz">
             <objects>
-                <viewController storyboardIdentifier="Login" id="q8R-Kj-T9S" customClass="LoginViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="q8R-Kj-T9S" customClass="LoginViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b9-2F-1or">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,7 @@
                                 <state key="normal" image="Sign In"/>
                                 <connections>
                                     <action selector="sign_in:" destination="q8R-Kj-T9S" eventType="touchUpInside" id="Uvv-un-WL0"/>
+                                    <segue destination="Tja-d3-ihC" kind="show" id="nbh-sz-G2u"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrh-UB-db8">
@@ -118,7 +119,7 @@
         <!--Swipe View Controller-->
         <scene sceneID="RGG-cK-e8I">
             <objects>
-                <viewController id="Tja-d3-ihC" customClass="SwipeViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tja-d3-ihC" customClass="SwipeViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N5F-KB-Y8c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,6 +170,7 @@
                                         <state key="normal" backgroundImage="Messaging"/>
                                         <connections>
                                             <action selector="goToMessages:" destination="Tja-d3-ihC" eventType="touchUpInside" id="Kx3-8K-IZh"/>
+                                            <segue destination="SQh-e9-nwj" kind="show" id="yqq-S2-uU6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-nA-ysx">
@@ -206,7 +208,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6S-k7-zfp">
                                 <rect key="frame" x="0.0" y="100.5" width="375" height="422"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-f4-3wB" customClass="SwipeView" customModule="Login" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-f4-3wB" customClass="SwipeView" customModule="Pyromance" customModuleProvider="target">
                                         <rect key="frame" x="39.5" y="10" width="296" height="402"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-8y-cKI" userLabel="nameLabel">
@@ -319,7 +321,7 @@
         <!--Registration View Controller-->
         <scene sceneID="6Ws-AT-Aap">
             <objects>
-                <viewController id="hdq-cM-6sP" customClass="RegistrationViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hdq-cM-6sP" customClass="RegistrationViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxt-4O-H1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,6 +432,7 @@
                                 <state key="normal" image="Sign Up"/>
                                 <connections>
                                     <action selector="sign_up:" destination="hdq-cM-6sP" eventType="touchUpInside" id="Hcn-LL-4nO"/>
+                                    <segue destination="q8R-Kj-T9S" kind="show" id="y0C-6Z-GjC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3s-br-4Ay">
@@ -505,6 +508,162 @@
             </objects>
             <point key="canvasLocation" x="1754" y="928"/>
         </scene>
+        <!--Contacts Table View Controller-->
+        <scene sceneID="JJb-rq-ThH">
+            <objects>
+                <tableViewController id="SQh-e9-nwj" customClass="ContactsTableViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FRp-vg-dOq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mlB-FK-sAE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0f-LB-wgL">
+                                    <rect key="frame" x="18" y="10" width="79" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="X0f-LB-wgL" secondAttribute="height" multiplier="79:60" id="JLz-ud-BLI"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="Messaging"/>
+                                    <connections>
+                                        <segue destination="Tja-d3-ihC" kind="show" id="tq5-c1-h8W"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-fz-8Na" userLabel="My Matches">
+                                    <rect key="frame" x="129" y="28" width="104" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="X0f-LB-wgL" firstAttribute="leading" secondItem="mlB-FK-sAE" secondAttribute="leading" constant="18" id="CD1-RC-Nsa"/>
+                                <constraint firstItem="X0f-LB-wgL" firstAttribute="width" secondItem="X0f-LB-wgL" secondAttribute="height" multiplier="79:60" id="Jap-B2-jPP"/>
+                                <constraint firstAttribute="bottom" secondItem="X0f-LB-wgL" secondAttribute="bottom" constant="12" id="kuq-8q-shF"/>
+                                <constraint firstItem="X0f-LB-wgL" firstAttribute="top" secondItem="mlB-FK-sAE" secondAttribute="top" constant="10" id="zbu-hH-5Ak"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eqe-Q9-ENK">
+                                <rect key="frame" x="0.0" y="110" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eqe-Q9-ENK" id="2AE-UZ-PaW" customClass="ContactCell" customModule="Pyromance" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSG-E1-1gk">
+                                            <rect key="frame" x="364" y="-52" width="50" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="UPt-yB-qFR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KSG-E1-1gk" firstAttribute="trailing" secondItem="2AE-UZ-PaW" secondAttribute="trailingMargin" id="9Zz-Vy-CET"/>
+                                        <constraint firstItem="KSG-E1-1gk" firstAttribute="top" secondItem="2AE-UZ-PaW" secondAttribute="topMargin" constant="-63" id="Oj8-uO-05A"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KSG-E1-1gk" secondAttribute="bottom" constant="-43" id="z1S-0P-WwN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="u2w-gf-6cu" kind="show" identifier="messengerTransition" id="xDe-Z0-iHp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SQh-e9-nwj" id="gH9-cB-GhG"/>
+                            <outlet property="delegate" destination="SQh-e9-nwj" id="iKJ-ty-NUr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1l-oY-RkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3768.8000000000002" y="151.57421289355324"/>
+        </scene>
+        <!--Messaging Parent View Controller-->
+        <scene sceneID="YQG-fS-G9H">
+            <objects>
+                <viewController id="u2w-gf-6cu" customClass="MessagingParentViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWr-5M-Us6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxN-J8-ysI">
+                                <rect key="frame" x="16" y="20" width="340" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQZ-tr-gOn">
+                                        <rect key="frame" x="151" y="24" width="57" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-kW-TYO">
+                                        <rect key="frame" x="8" y="5" width="75" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zgR-kW-TYO" secondAttribute="height" multiplier="79:60" id="eG6-v4-GaL"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Messaging"/>
+                                        <connections>
+                                            <segue destination="SQh-e9-nwj" kind="show" id="4je-VU-T4a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="top" secondItem="QxN-J8-ysI" secondAttribute="top" constant="5" id="7l6-qR-L1y"/>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="centerY" secondItem="yQZ-tr-gOn" secondAttribute="centerY" id="95C-38-MPp"/>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="leading" secondItem="QxN-J8-ysI" secondAttribute="leadingMargin" id="9e6-ox-v0N"/>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="width" secondItem="zgR-kW-TYO" secondAttribute="height" multiplier="79:60" id="OSC-Lg-2PO"/>
+                                    <constraint firstItem="yQZ-tr-gOn" firstAttribute="leading" secondItem="zgR-kW-TYO" secondAttribute="trailing" constant="69" id="a13-Jj-Ird"/>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="centerY" secondItem="QxN-J8-ysI" secondAttribute="centerY" id="meA-o0-Qpb"/>
+                                    <constraint firstItem="zgR-kW-TYO" firstAttribute="width" secondItem="zgR-kW-TYO" secondAttribute="height" multiplier="79:60" id="y6r-ih-gqY"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5w-VI-9BC">
+                                <rect key="frame" x="20" y="105" width="336" height="542"/>
+                                <connections>
+                                    <segue destination="sdl-Rz-l64" kind="embed" identifier="embedChildSegue" id="FLc-cf-SLj"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X5w-VI-9BC" firstAttribute="top" secondItem="QxN-J8-ysI" secondAttribute="bottom" constant="18" id="9Mq-eu-u5f"/>
+                            <constraint firstAttribute="bottom" secondItem="X5w-VI-9BC" secondAttribute="bottom" constant="20" symbolic="YES" id="FqR-8F-BF5"/>
+                            <constraint firstItem="QxN-J8-ysI" firstAttribute="trailing" secondItem="X5w-VI-9BC" secondAttribute="trailing" id="Kwn-DQ-pLN"/>
+                            <constraint firstItem="vT5-7b-31C" firstAttribute="trailing" secondItem="QxN-J8-ysI" secondAttribute="trailing" constant="19" id="YSi-un-j8K"/>
+                            <constraint firstItem="QxN-J8-ysI" firstAttribute="leading" secondItem="rWr-5M-Us6" secondAttribute="leadingMargin" id="Z3Y-Wo-yEm"/>
+                            <constraint firstItem="QxN-J8-ysI" firstAttribute="top" secondItem="vT5-7b-31C" secondAttribute="top" id="c85-1W-Gnf"/>
+                            <constraint firstItem="X5w-VI-9BC" firstAttribute="top" secondItem="rWr-5M-Us6" secondAttribute="top" constant="105" id="gAQ-u6-4W9"/>
+                            <constraint firstItem="X5w-VI-9BC" firstAttribute="leading" secondItem="vT5-7b-31C" secondAttribute="leading" constant="20" id="llQ-ov-cZV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vT5-7b-31C"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactNameLabel" destination="yQZ-tr-gOn" id="5cA-xr-AI6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yo-0a-CCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4664.8000000000002" y="151.57421289355324"/>
+        </scene>
+        <!--Messaging Child View Controller-->
+        <scene sceneID="htr-Ps-R4o">
+            <objects>
+                <viewController id="sdl-Rz-l64" customClass="MessagingChildViewController" customModule="Pyromance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mco-oF-AFK">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="542"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gyy-Gv-nlX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEq-ue-VhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5601" y="152"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back Arrow" width="332" height="628"/>
@@ -521,6 +680,8 @@
         <image name="checkBoxOUTLINE" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4je-VU-T4a"/>
+        <segue reference="tq5-c1-h8W"/>
         <segue reference="wQK-oq-rqa"/>
     </inferredMetricsTieBreakers>
 </document>

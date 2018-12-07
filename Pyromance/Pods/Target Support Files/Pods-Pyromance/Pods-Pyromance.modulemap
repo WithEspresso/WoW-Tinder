@@ -1,0 +1,6 @@
+framework module Pods_Pyromance {
+  umbrella header "Pods-Pyromance-umbrella.h"
+
+  export *
+  module * { export * }
+}
