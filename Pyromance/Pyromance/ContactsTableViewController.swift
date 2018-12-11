@@ -58,7 +58,7 @@ class ContactsTableViewController: UITableViewController, contactToMessengerDele
      */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = contacts[indexPath.row].getName()
-        performSegue(withIdentifier: "messengerTransition", sender: self)
+        self.performSegue(withIdentifier: "messengerTransition", sender: self)
     }
     
     /*
