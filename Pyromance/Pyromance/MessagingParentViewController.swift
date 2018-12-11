@@ -30,7 +30,7 @@ class MessagingParentViewController: UIViewController {
         if segue.identifier == "embedChildSegue" {
             if let childVC = segue.destination as? MessagingChildViewController {
                 //Some property on ChildVC that needs to be set
-                childVC.dataSource = "Hello world"
+                childVC.contactName = self.contactName
             }
         }
     }

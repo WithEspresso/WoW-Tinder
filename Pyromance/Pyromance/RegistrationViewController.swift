@@ -73,7 +73,9 @@ class RegistrationViewController: UIViewController {
                 //Registration is done here.
                 Auth.auth().createUser(withEmail: enteredEmailAddress, password: enteredPassword) { (authResult, error) in
                     guard let user = authResult?.user else { return }
-                    user.createProfileChangeRequest().displayName = enteredUsername
+                    let changeRequest = user.createProfileChangeRequest()
+                    changeRequest.displayName = enteredUsername
+                    
                     let ref = Constants.refs.databaseUsers.childByAutoId()
                     // Placeholder hardcoded profile
                     let user_information = ["email": enteredEmailAddress, "username": enteredUsername, "server": "Stormrage", "faction": "Alliance", "level": "120"]
