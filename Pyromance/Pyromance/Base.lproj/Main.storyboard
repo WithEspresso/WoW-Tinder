@@ -55,7 +55,6 @@
                                 <state key="normal" image="Sign In"/>
                                 <connections>
                                     <action selector="sign_in:" destination="q8R-Kj-T9S" eventType="touchUpInside" id="Uvv-un-WL0"/>
-                                    <segue destination="Tja-d3-ihC" kind="show" id="nbh-sz-G2u"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrh-UB-db8">
@@ -110,11 +109,12 @@
                     <connections>
                         <outlet property="password" destination="kLC-Jh-j72" id="Pdy-3B-fiC"/>
                         <outlet property="username" destination="doR-eF-sRF" id="c2I-jU-7vm"/>
+                        <segue destination="Tja-d3-ihC" kind="show" identifier="loginTransition" id="Lcc-bf-dHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xo-TR-Lzz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="152"/>
+            <point key="canvasLocation" x="1663" y="152"/>
         </scene>
         <!--Swipe View Controller-->
         <scene sceneID="RGG-cK-e8I">
@@ -828,7 +828,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="5nl-Vy-0Ug"/>
         <segue reference="u7M-1n-d6y"/>
-        <segue reference="4Hk-zK-yR1"/>
+        <segue reference="Lcc-bf-dHs"/>
         <segue reference="y0C-6Z-GjC"/>
     </inferredMetricsTieBreakers>
 </document>

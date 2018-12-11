@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -22,8 +23,17 @@ class LoginViewController: UIViewController {
         let enteredUsername = username.text ?? "No Username Entered"
         let enteredPassword = password.text ?? "No Password Entered"
         
-        print(enteredUsername)
-        print(enteredPassword)
+        // If Firebase is able to authenticate the user, perform a segue.
+        Auth.auth().signIn(withEmail: enteredUsername, password: enteredPassword) { (user, error) in
+            if error != nil {
+                NSLog("Sign in failed.")
+                return
+            }
+            else {
+                NSLog("Sign in successful.")
+                self.performSegue(withIdentifier: "loginTransition", sender: self)
+            }
+        }
     }
     
     

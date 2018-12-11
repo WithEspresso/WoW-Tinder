@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
     
@@ -69,8 +70,15 @@ class RegistrationViewController: UIViewController {
                 print(enteredPassword)
                 print(enteredConfirmationPassword)
                 print(didAgeCheck)
-                //do login here
-                
+                //Registration is done here.
+                Auth.auth().createUser(withEmail: enteredEmailAddress, password: enteredPassword) { (authResult, error) in
+                    guard let user = authResult?.user else { return }
+                    user.createProfileChangeRequest().displayName = enteredUsername
+                    let ref = Constants.refs.databaseUsers.childByAutoId()
+                    // Placeholder hardcoded profile
+                    let user_information = ["email": enteredEmailAddress, "username": enteredUsername, "server": "Stormrage", "faction": "Alliance", "level": "120"]
+                    ref.setValue(user_information)
+                }
                 //Transitions back to login view once registration completes
                 performSegue(withIdentifier: "RegtoLogin", sender: self)
             } else {
