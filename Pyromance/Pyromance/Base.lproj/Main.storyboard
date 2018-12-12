@@ -170,7 +170,7 @@
                                         <state key="normal" backgroundImage="Messaging"/>
                                         <connections>
                                             <action selector="goToMessages:" destination="Tja-d3-ihC" eventType="touchUpInside" id="Kx3-8K-IZh"/>
-                                            <segue destination="8oT-YE-5GZ" kind="show" id="QiM-cn-LGo"/>
+                                            <segue destination="8oT-YE-5GZ" kind="show" identifier="contactsTableTransition" id="QiM-cn-LGo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-nA-ysx">
@@ -534,7 +534,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Back Arrow"/>
                                         <connections>
-                                            <segue destination="8oT-YE-5GZ" kind="show" id="5nl-Vy-0Ug"/>
+                                            <segue destination="8oT-YE-5GZ" kind="show" identifier="returnToContactsTransition" id="5nl-Vy-0Ug"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -828,7 +828,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="5nl-Vy-0Ug"/>
         <segue reference="u7M-1n-d6y"/>
-        <segue reference="Lcc-bf-dHs"/>
+        <segue reference="4Hk-zK-yR1"/>
         <segue reference="y0C-6Z-GjC"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,9 @@ class MessagingChildViewController: JSQMessagesViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        sender = UserDefaults.standard.string(forKey: "username")
+        print("Sender in messagingchildviewcontroller is: ")
+        print(String(describing: sender))
         
         inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
@@ -39,13 +42,10 @@ class MessagingChildViewController: JSQMessagesViewController {
         // Gets the currently logged in user for this session's information.
         let user = Auth.auth().currentUser
         if let user = user {
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = "Skarmorite"
             NSLog(user.email!)
             
-            sender = "Skarmorite" //user.displayName;
             senderId = "1234" // user.uid
-            senderDisplayName = "Skarmorite"
+            senderDisplayName = sender
 
             
             /* Since Firebase only allows one SELECT query at the same time,
@@ -123,7 +123,15 @@ class MessagingChildViewController: JSQMessagesViewController {
         ref.setValue(message)
         finishSendingMessage()
     }
+    
+    // Passses sender back and forth to the contacts table.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "returnToContactsTransition" {
+            if let contactsVC = segue.destination as? ContactsTableViewController {
+                //Some property on contactsVC that needs to be set
+                contactsVC.sender = self.sender
+            }
+        }
+    }
 }
-
-
 

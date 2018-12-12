@@ -36,11 +36,45 @@ class LoginViewController: UIViewController {
         }
     }
     
+    var databaseHandle : DatabaseHandle!
+    
+    /*
+     Segues into the main swiping view controller with the user's username.
+     Used for pulling potential matches from the database.
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let email = Auth.auth().currentUser?.email
+        var queriedUsername : String?
+        
+        let searchRef = Constants.refs.databaseUsers.queryOrdered(byChild: "email").queryEqual(toValue: email)
+        searchRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.exists() {
+                for data in snapshot.children.allObjects as! [DataSnapshot]
+                {
+                    print("Found: \(data.childSnapshot(forPath: "username").value!)")
+                    queriedUsername = data.childSnapshot(forPath: "username").value as? String
+                    
+                    // Saving to UserDefaults
+                    UserDefaults.standard.set(queriedUsername, forKey: "username")
+                    let userDefaultsUsername = UserDefaults.standard.string(forKey: "username")
+                    print("From user defaults: \(String(describing: userDefaultsUsername))")
+                }
+            }
+            else {
+                print("Doesn't exist")
+            }
+        })
+        
+        if segue.identifier == "loginTransition" {
+            if let destination = segue.destination as? SwipeViewController {
+                destination.username = queriedUsername
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

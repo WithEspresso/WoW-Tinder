@@ -19,11 +19,17 @@ class MessagingParentViewController: UIViewController {
     @IBOutlet weak var messagingContainer: UIView!
     
     var contactName : String?
+    var sender : String?
     var delegate : contactToMessengerDelegate! = nil
      
     override func viewDidLoad() {
         super.viewDidLoad()
         contactNameLabel.text = contactName
+        sender = UserDefaults.standard.string(forKey: "username")
+        
+        //Debug
+        print("Sender in messagingParentViewController is: ")
+        print(String(describing: sender))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,6 +37,7 @@ class MessagingParentViewController: UIViewController {
             if let childVC = segue.destination as? MessagingChildViewController {
                 //Some property on ChildVC that needs to be set
                 childVC.contactName = self.contactName
+                childVC.sender = self.sender
             }
         }
     }

@@ -12,9 +12,15 @@ class ContactsTableViewController: UITableViewController, contactToMessengerDele
     
     var contacts:[Contact] = []
     var selected: String?
+    var sender: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sender = UserDefaults.standard.string(forKey: "username")
+        print("Sender in ContactsTableViewController is: ")
+        print(String(describing: sender))
+        
         tableView.register(ContactCell.self, forCellReuseIdentifier: "contactCell")
         retreiveContacts()
     }
@@ -68,6 +74,7 @@ class ContactsTableViewController: UITableViewController, contactToMessengerDele
         if let destination = segue.destination as? MessagingParentViewController {
             destination.contactName = selected
             destination.delegate = self
+            destination.sender = self.sender
         }
     }
     
