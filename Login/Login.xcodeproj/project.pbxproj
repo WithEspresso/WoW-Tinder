@@ -68,14 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CB1CE0621B737C80003CDB5 /* main */ = {
+		3CB1CE0621B737C80003CDB5 /* swipe view */ = {
 			isa = PBXGroup;
 			children = (
 				BF2273A221B35F51002EF797 /* SwipeViewController.swift */,
 				B031E4C921B484CD0047E4B4 /* SwipeView.swift */,
 				B031E4CD21B48CA60047E4B4 /* swipeable.swift */,
 			);
-			path = main;
+			path = "swipe view";
 			sourceTree = "<group>";
 		};
 		BF22739D21B226C5002EF797 /* Fonts */ = {
@@ -108,7 +108,7 @@
 		BFCDCF9821A49F5D00C6868D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3CB1CE0621B737C80003CDB5 /* main */,
+				3CB1CE0621B737C80003CDB5 /* swipe view */,
 				BFCDCF9921A49F5E00C6868D /* AppDelegate.swift */,
 				BFCDCF9B21A49F5E00C6868D /* RegistrationViewController.swift */,
 				BFCDCF9D21A49F5E00C6868D /* Main.storyboard */,

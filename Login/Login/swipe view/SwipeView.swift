@@ -66,15 +66,17 @@ class SwipeView:UIView{
 //           print(self.center)
            if( self.center.y > 400) {
             print("bottom")
+            
             self.center = leashPoint
-            self.superview!.sendSubview(toBack: self)
             
            }else if( self.center.x < 20){
             print("left")
+            self.superview!.sendSubview(toBack: self)
             self.center = leashPoint
             
            }else if( self.center.x > 300){
             print("right")
+            self.superview!.sendSubview(toBack: self)
             self.center = leashPoint
             
            }
