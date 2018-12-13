@@ -21,12 +21,12 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var swipeView: SwipeView!
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var realmLabel: UILabel!
-    @IBOutlet weak var classLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var cardViewProfileImageView: UIImageView!
+    @IBOutlet weak var cardViewLevelLabel: UILabel!
+    @IBOutlet weak var cardViewNameLabel: UILabel!
+    @IBOutlet weak var cardViewRealmLabel: UILabel!
+    @IBOutlet weak var cardViewClassLabel: UILabel!
+    @IBOutlet weak var cardViewDescriptionLabel: UILabel!
     
     
     @IBAction func dislike(_ sender: UIButton) {
@@ -55,11 +55,16 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         let nextUsername = "Skarmorite-Stormrage"
         self.loadNextImage(currentImageUrl: nextImage)
         self.updatePotentialMatchNameLabel(newUsername: nextUsername)
-        
-        cardView.text
     }
     func likeSwipe(_ cardView:UIView){
         print("recogized by VC")
+        print("\(String(describing: username)) Liked: ")
+        self.addLIkeToDatabase()
+        // Hardcoded values for debugging
+        let nextImage = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
+        let nextUsername = "Asmongold-Stormrage"
+        self.loadNextImage(currentImageUrl: nextImage)
+        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
     }
     
     @IBOutlet weak var potentialMatchUsernameLabel: UILabel!
@@ -111,7 +116,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         let currentImageUrl = defaultImageUrl
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIViewContentMode.scaleAspectFit
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
@@ -148,7 +153,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         //let currentImageUrl = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIViewContentMode.scaleAspectFit
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
