@@ -35,8 +35,10 @@ class InitProfileViewController: UIViewController {
         //self.getUserProfileFromBlizzardAPI(username: enteredUsername as! String, realm: RealmInput.text as! String)
         let username = enteredUsername
         blizzardAPICaller = BlizzardAPICaller.init(characterName: username, realm: "Stormrage")
-        let image : String? = blizzardAPICaller?.getThumbnail(characterName: username ?? "Skarmorite", realm: "Stormrage")
+        var image : String? = blizzardAPICaller?.getThumbnail(characterName: username ?? "Skarmorite", realm: "Stormrage")
             ?? "https://bnetproduct-a.akamaihd.net//26/108f97e24b8b60b4c132e42c0ee956d8-WoW_Letters_Icon_optimized.png"
+        sleep(10)
+        image = blizzardAPICaller?.getImage()
         let ref = Constants.refs.databaseUsers.childByAutoId()
         let user_information = ["email": enteredEmailAddress ?? "",
                                 "username": enteredUsername ?? "",

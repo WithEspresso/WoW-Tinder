@@ -87,7 +87,7 @@ class BlizzardAPICaller {
         print("Creating API call with URL: \(userContextUrl)")
         let myRequest: NSURLRequest = NSURLRequest(url: userContextUrl as URL)
         let mySession = URLSession.shared
-        let task = mySession.dataTask(with: myRequest as URLRequest) { data, response, error in
+        _ = mySession.dataTask(with: myRequest as URLRequest) { data, response, error in
             do {
                 let jsonresult = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]
                 print("Getting thumbnail: ")
@@ -97,11 +97,11 @@ class BlizzardAPICaller {
                 print("Main image suffix is: \(String(describing: self.thumbnail))")
                 self.thumbnail = self.baseURL + self.thumbnail!
                 print("Complete path to image is: \(String(describing: self.thumbnail))")
+                //return self.thumbnail
             } catch {
                 print(error)
             }
         }
-        task.resume()
         print("INSIDE GET_THUMBNAIL: \(String(describing: thumbnail))")
         return self.thumbnail
     }
