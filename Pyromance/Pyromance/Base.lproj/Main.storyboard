@@ -134,7 +134,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Interested"/>
                                         <connections>
-                                            <action selector="like:" destination="Tja-d3-ihC" eventType="touchUpInside" id="xIv-Ej-8hM"/>
+                                            <action selector="like:" destination="Tja-d3-ihC" eventType="touchUpInside" id="DLr-0D-0xR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-bt-nK0">
@@ -144,7 +144,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Reject"/>
                                         <connections>
-                                            <action selector="dislike:" destination="Tja-d3-ihC" eventType="touchUpInside" id="mLn-VC-sr3"/>
+                                            <action selector="dislike:" destination="Tja-d3-ihC" eventType="touchUpInside" id="O91-0M-0b5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -522,7 +522,7 @@
                                 <rect key="frame" x="16" y="20" width="340" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQZ-tr-gOn">
-                                        <rect key="frame" x="147" y="23" width="46.5" height="21"/>
+                                        <rect key="frame" x="149" y="23.5" width="42" height="20"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -826,8 +826,8 @@
         <image name="checkBoxOUTLINE" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5nl-Vy-0Ug"/>
-        <segue reference="u7M-1n-d6y"/>
+        <segue reference="QiM-cn-LGo"/>
+        <segue reference="PD7-nr-chn"/>
         <segue reference="4Hk-zK-yR1"/>
         <segue reference="y0C-6Z-GjC"/>
     </inferredMetricsTieBreakers>

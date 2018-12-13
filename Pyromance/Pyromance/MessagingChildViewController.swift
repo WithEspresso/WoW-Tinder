@@ -46,7 +46,6 @@ class MessagingChildViewController: JSQMessagesViewController {
             
             senderId = "1234" // user.uid
             senderDisplayName = sender
-
             
             /* Since Firebase only allows one SELECT query at the same time,
              conversations are organized by the conversationId, a combination
