@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SwipeViewController: UIViewController {
+class SwipeViewController: UIViewController, CardSwipeDelegate {
     
     @IBAction func goToProfile(_ sender: Any) {
     }
@@ -19,6 +19,15 @@ class SwipeViewController: UIViewController {
     
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var swipeView: SwipeView!
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var realmLabel: UILabel!
+    @IBOutlet weak var classLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     
     @IBAction func dislike(_ sender: UIButton) {
         print("\(String(describing: username)) Disliked: ")
@@ -29,7 +38,6 @@ class SwipeViewController: UIViewController {
         self.updatePotentialMatchNameLabel(newUsername: nextUsername)
     }
     
-
     @IBAction func like(_ sender: UIButton) {
         print("\(String(describing: username)) Liked: ")
         self.addLIkeToDatabase()
@@ -38,6 +46,20 @@ class SwipeViewController: UIViewController {
         let nextUsername = "Asmongold-Stormrage"
         self.loadNextImage(currentImageUrl: nextImage)
         self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+    }
+    
+    func dislikeSwipe(_ cardView:UIView){
+        print("\(String(describing: username)) Disliked: ")
+        // Hardcoded values for debugging.
+        let nextImage = "https://render-us.worldofwarcraft.com/character/stormrage/216/196027864-main.jpg"
+        let nextUsername = "Skarmorite-Stormrage"
+        self.loadNextImage(currentImageUrl: nextImage)
+        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+        
+        cardView.text
+    }
+    func likeSwipe(_ cardView:UIView){
+        print("recogized by VC")
     }
     
     @IBOutlet weak var potentialMatchUsernameLabel: UILabel!
@@ -55,12 +77,6 @@ class SwipeViewController: UIViewController {
     var urlKey = URL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
     let session = URLSession(configuration: .default)
     
-    
-    @IBOutlet weak var swipeView: SwipeView!
-    /*
-     @param:    None
-     @return:   None
-     */
     func addLIkeToDatabase() {
         let ref = Constants.refs.databaseLikes.child(self.username)
         let likedUser = potentialMatchUsernameLabel.text
@@ -75,6 +91,7 @@ class SwipeViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeView.delegate = self
         username = UserDefaults.standard.string(forKey: "username")
         
         // Debug
@@ -94,7 +111,7 @@ class SwipeViewController: UIViewController {
         let currentImageUrl = defaultImageUrl
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.contentMode = UIViewContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
@@ -131,7 +148,7 @@ class SwipeViewController: UIViewController {
         //let currentImageUrl = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.contentMode = UIViewContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }

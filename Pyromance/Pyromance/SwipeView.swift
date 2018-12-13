@@ -9,18 +9,22 @@
 import Foundation
 import UIKit
 
+protocol CardSwipeDelegate: class{
+    func dislikeSwipe(_ cardView:UIView);
+    func likeSwipe(_ cardView:UIView);
+}
+
 class SwipeView:UIView{
     
     var panGR: UIPanGestureRecognizer?
     var tapGR: UITapGestureRecognizer?
     var panGT: CGPoint = .zero
+    weak var delegate: CardSwipeDelegate?
     
     var username: String?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        
         setupGR()
     }
     
@@ -69,15 +73,19 @@ class SwipeView:UIView{
             if( self.center.y > 400) {
                 print("bottom")
                 self.center = leashPoint
-                self.superview!.sendSubviewToBack(self)
+//                self.superview!.sendSubview(toBack: self)
                 
             }else if( self.center.x < 20){
                 print("Swiped left")
                 self.center = leashPoint
+                delegate?.dislikeSwipe(self)
+//                self.superview!.sendSubview(toBack: self)
                 
             }else if( self.center.x > 300){
                 print("Swiped right")
                 self.center = leashPoint
+                delegate?.likeSwipe(self)
+//                self.superview!.sendSubview(toBack: self)
                 
             }
             else{
