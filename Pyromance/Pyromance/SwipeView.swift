@@ -15,8 +15,12 @@ class SwipeView:UIView{
     var tapGR: UITapGestureRecognizer?
     var panGT: CGPoint = .zero
     
+    var username: String?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        
         setupGR()
     }
     
@@ -29,12 +33,10 @@ class SwipeView:UIView{
         let panGR = UIPanGestureRecognizer(target: self, action: #selector(SwipeView.panRecognized(_:)))
         self.panGR = panGR
         addGestureRecognizer(panGR)
-        
         // Tap Gesture Recognizer
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(SwipeView.tapRecognized(_:)))
         self.tapGR = tapGR
         addGestureRecognizer(tapGR)
-        
         print("panGR tapGR")
     }
     
@@ -70,11 +72,11 @@ class SwipeView:UIView{
                 self.superview!.sendSubviewToBack(self)
                 
             }else if( self.center.x < 20){
-                print("left")
+                print("Swiped left")
                 self.center = leashPoint
                 
             }else if( self.center.x > 300){
-                print("right")
+                print("Swiped right")
                 self.center = leashPoint
                 
             }
