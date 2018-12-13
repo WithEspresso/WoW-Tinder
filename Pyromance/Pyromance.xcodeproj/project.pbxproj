@@ -146,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD38AC821B8A5210032F7C0 /* AppDelegate.swift */,
+				AF7D87E921C315DA00ABD35F /* BlizzardAPICaller.swift */,
 				AF896A4021B8ADC600497394 /* Constants.swift */,
 				AF896A4121B8ADC600497394 /* Contact.swift */,
 				AF896A4221B8ADC700497394 /* ContactCell.swift */,
@@ -167,7 +168,6 @@
 				BFD38AF321B8A7960032F7C0 /* SwipeView.swift */,
 				BFD38AF521B8A7C70032F7C0 /* swipeable.swift */,
 				BFD38AD421B8A5240032F7C0 /* Info.plist */,
-				AF7D87E921C315DA00ABD35F /* BlizzardAPICaller.swift */,
 			);
 			path = Pyromance;
 			sourceTree = "<group>";

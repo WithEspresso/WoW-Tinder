@@ -70,9 +70,44 @@ class BlizzardAPICaller {
     var gender: String?
     var level: String?
     var thumbnail: String?
+    let baseURL : String = "https://render-us.worldofwarcraft.com/character/"
     
     init(characterName : String?, realm : String?) {
+        self.characterName = characterName
+        self.realm = realm
         getUserProfile(characterName: characterName, realm: realm)
+    }
+    
+    /*
+     USE THIS ONE
+     */
+    func getThumbnail(characterName: String, realm: String) -> String? {
+        let userContextUrl: NSURL = NSURL(string: "https://us.api.blizzard.com/wow/character/\(realm)/\(characterName)?locale=en_US&access_token=\(self.accessToken)")!
+        
+        print("Creating API call with URL: \(userContextUrl)")
+        let myRequest: NSURLRequest = NSURLRequest(url: userContextUrl as URL)
+        let mySession = URLSession.shared
+        let task = mySession.dataTask(with: myRequest as URLRequest) { data, response, error in
+            do {
+                let jsonresult = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]
+                print("Getting thumbnail: ")
+                self.thumbnail = jsonresult!["thumbnail"] as? String
+                print("Thumbnail suffix is: \(String(describing: self.thumbnail))")
+                self.thumbnail = self.thumbnail!.replacingOccurrences(of: "avatar", with: "main")
+                print("Main image suffix is: \(String(describing: self.thumbnail))")
+                self.thumbnail = self.baseURL + self.thumbnail!
+                print("Complete path to image is: \(String(describing: self.thumbnail))")
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+        print("INSIDE GET_THUMBNAIL: \(String(describing: thumbnail))")
+        return self.thumbnail
+    }
+    
+    func getImage() -> String? {
+        return self.thumbnail
     }
     
     func getUserProfile(characterName : String?, realm : String?) {
@@ -100,20 +135,29 @@ class BlizzardAPICaller {
                         self.race = tempRace
                         print("Race is: \(String(describing: self.race))")
                         
-                        print("Getting gender: ")
-                        let genderKey = (jsonresult!["gender"] as? NSNumber)?.intValue
-                        let tempGender = (self.classDictionary[genderKey!] as! String)
-                        self.gender = tempGender
-                        print("Gender is: \(String(describing: self.gender))")
+                        /*
+                         print("Getting gender: ")
+                         let genderKey = (jsonresult!["gender"] as? NSNumber)?.intValue
+                         let tempGender = (self.classDictionary[genderKey!] as String)
+                         self.gender = tempGender
+                         print("Gender is: \(String(describing: self.gender))")
+                         
+                         
+                         print("Getting level: ")
+                         let level = (jsonresult!["level"] as? NSNumber)?.intValue
+                         print("Level is: \(String(describing: level))")
+                         self.level = (String(describing: level))
+                         
+                         */
                         
-                        print("Getting level: ")
-                        let level = (jsonresult!["level"] as? NSNumber)?.intValue
-                        print("Level is: \(String(describing: level))")
-                        self.level = (String(describing: level))
-                        
-                        print("Getting thumnail: ")
-                        let thumbnail = jsonresult!["thumbnail"] as! String
-                        print("thumbnail is: \(thumbnail)")
+                        print("Getting thumbnail: ")
+                        var thumbnail = jsonresult!["thumbnail"] as! String
+                        print("Thumbnail suffix is: \(thumbnail)")
+                        thumbnail = thumbnail.replacingOccurrences(of: "avatar", with: "main")
+                        print("Main image suffix is: \(thumbnail)")
+                        thumbnail = self.baseURL + thumbnail
+                        print("Complete path to image is: \(thumbnail)")
+                        self.thumbnail = thumbnail
                         
                     } catch {
                         print(error)
@@ -124,3 +168,4 @@ class BlizzardAPICaller {
         }
     }
 }
+
