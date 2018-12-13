@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>764586427579-g5mkb1762hqi44jo91s8ppp1g1cpkjeh.apps.googleusercontent.com</string>
+	<string>764586427579-9ldj2lkhhcuumpfmem4pvptnlmbu9ik3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.764586427579-g5mkb1762hqi44jo91s8ppp1g1cpkjeh</string>
+	<string>com.googleusercontent.apps.764586427579-9ldj2lkhhcuumpfmem4pvptnlmbu9ik3</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAcK3dqGdkoEjh25yHydSc5aoZiGGkCxec</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,23 +17,23 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>jclark.Pyromance</string>
+	<string>pyromance.Pyromance</string>
 	<key>PROJECT_ID</key>
 	<string>wow-tinder</string>
 	<key>STORAGE_BUCKET</key>
 	<string>wow-tinder.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:764586427579:ios:d3c8a1082ad680b7</string>
+	<string>1:764586427579:ios:a98975391fb191d4</string>
 	<key>DATABASE_URL</key>
 	<string>https://wow-tinder.firebaseio.com</string>
 </dict>
