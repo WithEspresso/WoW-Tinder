@@ -42,7 +42,7 @@ class SwipeViewController: UIViewController {
     
     // Holds information about the current user being passed judgement
     var imageUrls: [String?] = []
-    var potentialMatchUsers: [String] = []
+    var potentialMatches: [PotentialMatch] = []
     
     var urlKey = URL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
     let session = URLSession(configuration: .default)
@@ -119,12 +119,17 @@ class SwipeViewController: UIViewController {
                 print("Number of users found: \(snapshot.childrenCount)")               //   Number of users
                 for data in snapshot.children.allObjects as! [DataSnapshot]
                 {
-                    //let imageUrl = data.childSnapshot(forPath: "image").value as! String
-                    //let username = data.childSnapshot(forPath: "username").value as! String
-                    print("Found image: \(data.childSnapshot(forPath: "image").value as! String)")
-                    print("Found username: \(data.childSnapshot(forPath: "username").value as! String)")
-                    self.imageUrls.append(data.childSnapshot(forPath: "image").value as? String)
-                    self.potentialMatchUsers.append(data.childSnapshot(forPath: "username").value as? String ?? "")
+                    if let queriedImageUrl = data.childSnapshot(forPath: "image").value {
+                        if let queriedUsername = data.childSnapshot(forPath: "username").value {
+                            print("Creating new potential match from: ")
+                            print("Found image: \(data.childSnapshot(forPath: "image").value as! String)")
+                            print("for username: \(data.childSnapshot(forPath: "username").value as! String)")
+                            let newPotentialMatch = PotentialMatch.init(username: queriedUsername as! String, image: queriedImageUrl as! String)
+                            self.potentialMatches.append(newPotentialMatch)
+                            //self.imageUrls.append(data.childSnapshot(forPath: "image").value as? String)
+                            //self.potentialMatches.append(data.childSnapshot(forPath: "username").value as? String ?? "")
+                        }
+                    }
                 }
             }
         })
@@ -155,5 +160,7 @@ class SwipeViewController: UIViewController {
          */
     }
 }
+
+
 
 

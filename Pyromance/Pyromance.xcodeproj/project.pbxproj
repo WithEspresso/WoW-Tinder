@@ -15,6 +15,7 @@
 		AF896A4921B8ADC700497394 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A4321B8ADC700497394 /* ContactsTableViewController.swift */; };
 		AF896A4A21B8ADC700497394 /* MessagingChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF896A4421B8ADC700497394 /* MessagingChildViewController.swift */; };
 		AF896A4D21B8AFB200497394 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AF896A4C21B8AFB200497394 /* Podfile */; };
+		AF98E75521C1DAF80047D69F /* Potential Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98E75421C1DAF80047D69F /* Potential Match.swift */; };
 		BFC2617E21BA235C00A2F745 /* SettingsAndEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2617D21BA235C00A2F745 /* SettingsAndEditViewController.swift */; };
 		BFD38AC921B8A5210032F7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD38AC821B8A5210032F7C0 /* AppDelegate.swift */; };
 		BFD38ACB21B8A5210032F7C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD38ACA21B8A5210032F7C0 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		AF896A4421B8ADC700497394 /* MessagingChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingChildViewController.swift; sourceTree = "<group>"; };
 		AF896A4B21B8AFB200497394 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-header.h"; sourceTree = "<group>"; };
 		AF896A4C21B8AFB200497394 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AF98E75421C1DAF80047D69F /* Potential Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Potential Match.swift"; sourceTree = "<group>"; };
 		BFC2617D21BA235C00A2F745 /* SettingsAndEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAndEditViewController.swift; sourceTree = "<group>"; };
 		BFD38AC521B8A5210032F7C0 /* Pyromance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pyromance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD38AC821B8A5210032F7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,19 +139,20 @@
 		BFD38AC721B8A5210032F7C0 /* Pyromance */ = {
 			isa = PBXGroup;
 			children = (
+				BFD38AC821B8A5210032F7C0 /* AppDelegate.swift */,
 				AF896A4021B8ADC600497394 /* Constants.swift */,
-				BFC2617D21BA235C00A2F745 /* SettingsAndEditViewController.swift */,
 				AF896A4121B8ADC600497394 /* Contact.swift */,
 				AF896A4221B8ADC700497394 /* ContactCell.swift */,
 				AF896A4321B8ADC700497394 /* ContactsTableViewController.swift */,
+				BFD38AEC21B8A6670032F7C0 /* LoginViewController.swift */,
 				AF896A4421B8ADC700497394 /* MessagingChildViewController.swift */,
 				AF896A3F21B8ADC600497394 /* MessagingParentViewController.swift */,
-				BFD38AC821B8A5210032F7C0 /* AppDelegate.swift */,
-				BFD38ACA21B8A5210032F7C0 /* ViewController.swift */,
+				AF98E75421C1DAF80047D69F /* Potential Match.swift */,
 				BFD38AE821B8A5B00032F7C0 /* RegistrationViewController.swift */,
-				BFD38ACC21B8A5210032F7C0 /* Main.storyboard */,
+				BFC2617D21BA235C00A2F745 /* SettingsAndEditViewController.swift */,
 				BFD38AEA21B8A6230032F7C0 /* SwipeViewController.swift */,
-				BFD38AEC21B8A6670032F7C0 /* LoginViewController.swift */,
+				BFD38ACA21B8A5210032F7C0 /* ViewController.swift */,
+				BFD38ACC21B8A5210032F7C0 /* Main.storyboard */,
 				BFD38ACF21B8A5240032F7C0 /* Assets.xcassets */,
 				BFD38AEE21B8A6DF0032F7C0 /* Fonts */,
 				BFD38AD121B8A5240032F7C0 /* LaunchScreen.storyboard */,
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD38AE921B8A5B00032F7C0 /* RegistrationViewController.swift in Sources */,
+				AF98E75521C1DAF80047D69F /* Potential Match.swift in Sources */,
 				BFD38ACB21B8A5210032F7C0 /* ViewController.swift in Sources */,
 				AF896A4921B8ADC700497394 /* ContactsTableViewController.swift in Sources */,
 				AF896A4A21B8ADC700497394 /* MessagingChildViewController.swift in Sources */,
