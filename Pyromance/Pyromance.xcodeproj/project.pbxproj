@@ -29,6 +29,8 @@
 		BFD38AF221B8A7040032F7C0 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFD38AF121B8A7040032F7C0 /* MontserratAlternates-Bold.ttf */; };
 		BFD38AF421B8A7960032F7C0 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD38AF321B8A7960032F7C0 /* SwipeView.swift */; };
 		BFD38AF621B8A7C80032F7C0 /* swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD38AF521B8A7C70032F7C0 /* swipeable.swift */; };
+		BFEEBE4421C11842003EA6C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEEBE4321C11842003EA6C4 /* ProfileViewController.swift */; };
+		BFEEBE4621C2081F003EA6C4 /* InitProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEEBE4521C2081F003EA6C4 /* InitProfileViewController.swift */; };
 		CB12A510396EAE925C06A58C /* Pods_Pyromance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4545327674E481A2C0A8C1 /* Pods_Pyromance.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		BFD38AF121B8A7040032F7C0 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		BFD38AF321B8A7960032F7C0 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		BFD38AF521B8A7C70032F7C0 /* swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeable.swift; sourceTree = "<group>"; };
+		BFEEBE4321C11842003EA6C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BFEEBE4521C2081F003EA6C4 /* InitProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				BFD38ACA21B8A5210032F7C0 /* ViewController.swift */,
 				BFD38AE821B8A5B00032F7C0 /* RegistrationViewController.swift */,
 				BFD38ACC21B8A5210032F7C0 /* Main.storyboard */,
+				BFEEBE4521C2081F003EA6C4 /* InitProfileViewController.swift */,
+				BFEEBE4321C11842003EA6C4 /* ProfileViewController.swift */,
 				BFD38AEA21B8A6230032F7C0 /* SwipeViewController.swift */,
 				BFD38AEC21B8A6670032F7C0 /* LoginViewController.swift */,
 				BFD38ACF21B8A5240032F7C0 /* Assets.xcassets */,
@@ -353,7 +359,9 @@
 				AF896A4821B8ADC700497394 /* ContactCell.swift in Sources */,
 				AF896A4521B8ADC700497394 /* MessagingParentViewController.swift in Sources */,
 				BFD38AED21B8A6670032F7C0 /* LoginViewController.swift in Sources */,
+				BFEEBE4421C11842003EA6C4 /* ProfileViewController.swift in Sources */,
 				BFD38AEB21B8A6230032F7C0 /* SwipeViewController.swift in Sources */,
+				BFEEBE4621C2081F003EA6C4 /* InitProfileViewController.swift in Sources */,
 				AF896A4621B8ADC700497394 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
