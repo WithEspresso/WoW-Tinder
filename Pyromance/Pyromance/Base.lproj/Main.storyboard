@@ -313,6 +313,7 @@
                         <outlet property="dislikeButton" destination="gQZ-bt-nK0" id="jEi-Oa-ynV"/>
                         <outlet property="imageView" destination="3Mb-xQ-1Jf" id="94o-la-WZV"/>
                         <outlet property="likeButton" destination="ZHC-q5-jVp" id="O61-Og-3KZ"/>
+                        <outlet property="potentialMatchUsernameLabel" destination="sBx-8y-cKI" id="stX-eu-sYx"/>
                         <outlet property="swipeView" destination="QSP-f4-3wB" id="bIF-41-exZ"/>
                     </connections>
                 </viewController>

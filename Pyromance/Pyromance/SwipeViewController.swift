@@ -17,19 +17,28 @@ class SwipeViewController: UIViewController {
     @IBAction func goToMessages(_ sender: Any) {
     }
     
+    @IBOutlet weak var potentialMatchUsernameLabel: UILabel!
+    
     @IBOutlet weak var dislikeButton: UIButton!
     @IBAction func dislike(_ sender: UIButton) {
         print("\(String(describing: username)) Disliked: ")
+        
         // Hardcoded values for debugging.
         let nextImage = "https://render-us.worldofwarcraft.com/character/stormrage/216/196027864-main.jpg"
+        let nextUsername = "Skarmorite-Stormrage"
         self.loadNextImage(currentImageUrl: nextImage)
+        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
     }
     
     @IBOutlet weak var likeButton: UIButton!
     @IBAction func like(_ sender: UIButton) {
         print("\(String(describing: username)) Liked: ")
+        self.addLIkeToDatabase()
+        // Hardcoded values for debugging
         let nextImage = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
+        let nextUsername = "Asmongold-Stormrage"
         self.loadNextImage(currentImageUrl: nextImage)
+        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
     }
     
     @IBOutlet weak var imageView: UIImageView!
@@ -47,6 +56,18 @@ class SwipeViewController: UIViewController {
     var urlKey = URL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
     let session = URLSession(configuration: .default)
     
+    /*
+     @param:    None
+     @return:   None
+     */
+    func addLIkeToDatabase() {
+        let ref = Constants.refs.databaseLikes.child(self.username)
+        // Placeholder hardcoded profile
+        let user_like = [potentialMatchUsernameLabel.text]
+        ref.setValue(user_like)
+        print("Added new like to database: \(self.username) now likes \(user_like)")
+    }
+    
     /* Loads the current user from NSUserDefaults, asks the database to load potential matches,
      and then loads the original image.
      @param:    None
@@ -61,7 +82,9 @@ class SwipeViewController: UIViewController {
         print(String(describing: username))
         
         self.loadNextUser()
-        
+        // Update name label
+        let nextUsername = "Lehk-Stormrage"
+        updatePotentialMatchNameLabel(newUsername: nextUsername)
         // Loads image.
         imageView.image = UIImage(named: "imageView")
         
@@ -77,6 +100,14 @@ class SwipeViewController: UIViewController {
         }
     }
     
+    /*
+     Updates the name label.
+     @param:    String of the new name to display as a label
+     @return:   None
+     */
+    func updatePotentialMatchNameLabel(newUsername: String) {
+        potentialMatchUsernameLabel.text = newUsername
+    }
     
     /*
      Passes username in segue to the next screen.
@@ -107,7 +138,7 @@ class SwipeViewController: UIViewController {
     }
     
     /*
-     Loads the image path from the database of the next user to be judged.
+     Creates potential matches from querying the database and add it to an array.
      @param:    None
      @return:   None
      */
@@ -126,8 +157,6 @@ class SwipeViewController: UIViewController {
                             print("for username: \(data.childSnapshot(forPath: "username").value as! String)")
                             let newPotentialMatch = PotentialMatch.init(username: queriedUsername as! String, image: queriedImageUrl as! String)
                             self.potentialMatches.append(newPotentialMatch)
-                            //self.imageUrls.append(data.childSnapshot(forPath: "image").value as? String)
-                            //self.potentialMatches.append(data.childSnapshot(forPath: "username").value as? String ?? "")
                         }
                     }
                 }
