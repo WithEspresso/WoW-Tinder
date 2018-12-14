@@ -24,7 +24,7 @@ class MessagingChildViewController: JSQMessagesViewController {
     
     // Creates incoming bubble with lazy evalutation.
     lazy var incomingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
     }()
     
     // Sets up the database query, user ID stuff.
@@ -44,7 +44,8 @@ class MessagingChildViewController: JSQMessagesViewController {
         if let user = user {
             NSLog(user.email!)
             
-            senderId = "1234" // user.uid
+            print("USER ID FOR user: \(user.email) IS \(user.uid)")
+            senderId = user.uid
             senderDisplayName = sender
             
             /* Since Firebase only allows one SELECT query at the same time,
@@ -91,6 +92,9 @@ class MessagingChildViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource!
     {
+        let fullName = UserDefaults.standard.string(forKey: "username")
+        let nameArray = fullName!.split {$0 == " "}
+        let firstName = nameArray[0]
         return messages[indexPath.item].senderId == senderId ? outgoingBubble: incomingBubble
     }
     
