@@ -28,43 +28,47 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
     @IBOutlet weak var cardViewClassLabel: UILabel!
     @IBOutlet weak var cardViewDescriptionLabel: UILabel!
     
+    // Holds information about the current user being passed judgement
+    var imageUrls: [String?] = []
+    var potentialMatches: [PotentialMatch] = []
+    var potentialMatchIndex = 0
+    
+    func updateCardView(){
+        potentialMatchIndex += 1
+        if potentialMatchIndex > potentialMatches.count - 1 {
+            potentialMatchIndex = 0
+        }
+        
+        let currentPotentialMatch : PotentialMatch = potentialMatches[potentialMatchIndex]
+        self.loadNextImage(currentImageUrl: currentPotentialMatch.image)
+        self.updatePotentialMatchNameLabel(newUsername: currentPotentialMatch.getFullUsername())
+        self.cardViewLevelLabel.text = "120"
+//        self.cardViewClassLabel.text = potentialMatches[potentialMatchIndex].characterClass ?? "hunter"
+        self.cardViewClassLabel.text = "Hunter"
+        self.cardViewRealmLabel.text = "Stromrage"
+        self.cardViewDescriptionLabel.text = "I liek game. loooking 4 luv"
+        
+    }
     
     @IBAction func dislike(_ sender: UIButton) {
         print("\(String(describing: username)) Disliked: ")
-        // Hardcoded values for debugging.
-        let nextImage = "https://render-us.worldofwarcraft.com/character/stormrage/216/196027864-main.jpg"
-        let nextUsername = "Skarmorite-Stormrage"
-        self.loadNextImage(currentImageUrl: nextImage)
-        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+        self.updateCardView()
     }
     
     @IBAction func like(_ sender: UIButton) {
         print("\(String(describing: username)) Liked: ")
         self.addLIkeToDatabase()
-        // Hardcoded values for debugging
-        let nextImage = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
-        let nextUsername = "Asmongold-Stormrage"
-        self.loadNextImage(currentImageUrl: nextImage)
-        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+        self.updateCardView()
     }
     
     func dislikeSwipe(_ cardView:UIView){
         print("\(String(describing: username)) Disliked: ")
-        // Hardcoded values for debugging.
-        let nextImage = "https://render-us.worldofwarcraft.com/character/stormrage/216/196027864-main.jpg"
-        let nextUsername = "Skarmorite-Stormrage"
-        self.loadNextImage(currentImageUrl: nextImage)
-        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+        self.updateCardView()
     }
     func likeSwipe(_ cardView:UIView){
-        print("recogized by VC")
         print("\(String(describing: username)) Liked: ")
         self.addLIkeToDatabase()
-        // Hardcoded values for debugging
-        let nextImage = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
-        let nextUsername = "Asmongold-Stormrage"
-        self.loadNextImage(currentImageUrl: nextImage)
-        self.updatePotentialMatchNameLabel(newUsername: nextUsername)
+        self.updateCardView()
     }
     
     @IBOutlet weak var potentialMatchUsernameLabel: UILabel!
@@ -75,11 +79,9 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
     var server: String?
     var level: String?
     
-    // Holds information about the current user being passed judgement
-    var imageUrls: [String?] = []
-    var potentialMatches: [PotentialMatch] = []
     
-    var urlKey = URL(string: "https://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
+    
+    var urlKey = URL(string: "zhttps://render-us.worldofwarcraft.com/character/stormrage/97/196163681-main.jpg")!
     let session = URLSession(configuration: .default)
     
     func addLIkeToDatabase() {
@@ -103,7 +105,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         print("Username in SwipeViewController is: ")
         print(String(describing: username))
         
-        self.loadNextUser()
+        self.loadPotentialMatchesFromDatabase()
         // Update name label
         let nextUsername = "Lehk-Stormrage"
         updatePotentialMatchNameLabel(newUsername: nextUsername)
@@ -116,7 +118,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         let currentImageUrl = defaultImageUrl
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.contentMode = UIViewContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
@@ -153,7 +155,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         //let currentImageUrl = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.contentMode = UIViewContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
@@ -164,7 +166,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
      @param:    None
      @return:   None
      */
-    func loadNextUser() {
+    func loadPotentialMatchesFromDatabase() {
         print("Inside getNextUser!")
         Constants.refs.databaseUsers.observe(DataEventType.value, with: { (snapshot) in
             if snapshot.exists() {
