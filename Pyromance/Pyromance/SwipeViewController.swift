@@ -43,8 +43,8 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         self.loadNextImage(currentImageUrl: currentPotentialMatch.image)
         self.updatePotentialMatchNameLabel(newUsername: currentPotentialMatch.getFullUsername())
         self.cardViewLevelLabel.text = "120"
-//        self.cardViewClassLabel.text = potentialMatches[potentialMatchIndex].characterClass ?? "hunter"
-        self.cardViewClassLabel.text = "Hunter"
+        self.cardViewClassLabel.text = potentialMatches[potentialMatchIndex].characterClass ?? "hunter"
+//        self.cardViewClassLabel.text = "Hunter"
         self.cardViewRealmLabel.text = "Stromrage"
         self.cardViewDescriptionLabel.text = "I liek game. loooking 4 luv"
         
@@ -167,7 +167,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
      @return:   None
      */
     func loadPotentialMatchesFromDatabase() {
-        print("Inside getNextUser!")
+
         Constants.refs.databaseUsers.observe(DataEventType.value, with: { (snapshot) in
             if snapshot.exists() {
                 print("Found existing snapshot!")
