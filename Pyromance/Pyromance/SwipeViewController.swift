@@ -103,7 +103,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         print("Username in SwipeViewController is: ")
         print(String(describing: username))
         
-        self.loadNextUser()
+        self.loadPotentialMatchesFromDatabase()
         // Update name label
         let nextUsername = "Lehk-Stormrage"
         updatePotentialMatchNameLabel(newUsername: nextUsername)
@@ -164,8 +164,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
      @param:    None
      @return:   None
      */
-    func loadNextUser() {
-        print("Inside getNextUser!")
+    func loadPotentialMatchesFromDatabase() {
         Constants.refs.databaseUsers.observe(DataEventType.value, with: { (snapshot) in
             if snapshot.exists() {
                 print("Found existing snapshot!")
