@@ -118,7 +118,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         let currentImageUrl = defaultImageUrl
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIViewContentMode.scaleAspectFit
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }
@@ -155,7 +155,7 @@ class SwipeViewController: UIViewController, CardSwipeDelegate {
         //let currentImageUrl = "https://render-eu.worldofwarcraft.com/character/stormrage/63/135139903-main.jpg"
         if let url = NSURL(string: currentImageUrl){
             if let data = NSData(contentsOf: url as URL){
-                imageView.contentMode = UIViewContentMode.scaleAspectFit
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 imageView.image = UIImage(data: data as Data)
             }
         }

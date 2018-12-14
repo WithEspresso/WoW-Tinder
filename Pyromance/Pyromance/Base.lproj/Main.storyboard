@@ -260,10 +260,10 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Name Banner" translatesAutoresizingMaskIntoConstraints="NO" id="vko-sH-YNW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="281" height="68.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-8y-cKI" userLabel="nameLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-8y-cKI" userLabel="nameLabel">
                                                                 <rect key="frame" x="113.5" y="24" width="54" height="21"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="sBx-8y-cKI" secondAttribute="height" multiplier="18:7" id="N1j-4r-3TZ"/>
+                                                                    <constraint firstAttribute="height" constant="21" id="qpO-Lp-E1g"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="MontserratAlternates-Bold" family="Montserrat Alternates" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -282,14 +282,15 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="vko-sH-YNW" firstAttribute="leading" secondItem="pfD-Ll-XG3" secondAttribute="leading" id="8ii-zW-T96"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mXv-Kx-o5f" secondAttribute="bottom" id="A2i-D7-Df1"/>
                                                             <constraint firstItem="mXv-Kx-o5f" firstAttribute="centerX" secondItem="pfD-Ll-XG3" secondAttribute="centerX" id="DNP-ds-BbC"/>
                                                             <constraint firstAttribute="bottom" secondItem="vko-sH-YNW" secondAttribute="bottom" id="Qv7-bD-YvR"/>
-                                                            <constraint firstItem="mXv-Kx-o5f" firstAttribute="top" secondItem="sBx-8y-cKI" secondAttribute="bottom" constant="2.5" id="bbm-dI-zW7"/>
                                                             <constraint firstItem="vko-sH-YNW" firstAttribute="top" secondItem="pfD-Ll-XG3" secondAttribute="top" id="eQb-A2-j5L"/>
                                                             <constraint firstAttribute="trailing" secondItem="vko-sH-YNW" secondAttribute="trailing" id="ego-VU-isO"/>
                                                             <constraint firstAttribute="bottom" secondItem="mXv-Kx-o5f" secondAttribute="bottom" id="ik2-2x-St6"/>
                                                             <constraint firstAttribute="width" secondItem="pfD-Ll-XG3" secondAttribute="height" multiplier="94:23" id="rE0-EQ-wv2"/>
                                                             <constraint firstItem="sBx-8y-cKI" firstAttribute="centerX" secondItem="pfD-Ll-XG3" secondAttribute="centerX" id="riU-dp-fH8"/>
+                                                            <constraint firstItem="mXv-Kx-o5f" firstAttribute="top" secondItem="sBx-8y-cKI" secondAttribute="bottom" constant="2.5" id="v2P-6X-tSP"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
