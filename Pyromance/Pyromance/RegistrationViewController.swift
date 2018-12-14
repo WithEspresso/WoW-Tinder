@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
     
@@ -51,28 +52,38 @@ class RegistrationViewController: UIViewController {
         }
     }
     
-    //Sign up button action
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    /* Sign up button action
+     @param:    UIButton as sender
+     @return:   None
+     */
     @IBAction func sign_up(_ sender: UIButton) {
-        
-        //init all inputs as variables
         let enteredUsername = username.text ?? ""
         let enteredEmailAddress = emailAddress.text ?? ""
         let enteredPassword = password.text ?? ""
         let enteredConfirmationPassword = confirmPassword.text ?? ""
         let didAgeCheck = isChecked
-        
         if (enteredPassword == enteredConfirmationPassword){
             confirmationError.text = ""
-            if (didAgeCheck){
+            if (didAgeCheck) {
                 print(enteredUsername)
                 print(enteredEmailAddress)
                 print(enteredPassword)
                 print(enteredConfirmationPassword)
                 print(didAgeCheck)
-                //do login here
                 
-                //Transitions back to login view once registration completes
-                performSegue(withIdentifier: "RegtoLogin", sender: self)
+                //Registration is done here. If the user is logged in at
+                Auth.auth().createUser(withEmail: enteredEmailAddress, password: enteredPassword){ (authResult, error) in
+                    guard let user = authResult?.user
+                        else {
+                            //Transitions back to login view once registration completes
+                            self.performSegue(withIdentifier: "regToInitprofile", sender: self)
+                            return
+                    }
+                    let changeRequest = user.createProfileChangeRequest()
+                    changeRequest.displayName = enteredUsername
+                }
             } else {
                 print("Did not check age")
             }
@@ -81,13 +92,21 @@ class RegistrationViewController: UIViewController {
         }
     }
     
+    /*
+     Segues into the other view controller with the desired contact to message.
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? InitProfileViewController {
+            destination.enteredEmailAddress = self.emailAddress.text
+            destination.enteredUsername = self.username.text
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isChecked = false
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    
 }
 

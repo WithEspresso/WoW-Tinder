@@ -15,6 +15,8 @@ protocol Swipeable { }
 //MARK: 2 Protocol extension constrained to UIPanGestureRecognizer
 extension Swipeable where Self: UIPanGestureRecognizer {
     
+    
+    
     //MARK 3 Main function
     func swipeView(_ view: UIView) {
         

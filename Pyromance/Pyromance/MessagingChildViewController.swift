@@ -8,11 +8,14 @@
 
 import UIKit
 import JSQMessagesViewController
+import Firebase
 
 class MessagingChildViewController: JSQMessagesViewController {
     
-    var dataSource : String?
     var messages = [JSQMessage]();
+    var contactName : String?
+    var sender : String?
+    var conversationId: String?
     
     // Creates outgoing bubble with lazy evaluation
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
@@ -21,45 +24,67 @@ class MessagingChildViewController: JSQMessagesViewController {
     
     // Creates incoming bubble with lazy evalutation.
     lazy var incomingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
     }()
     
-    
+    // Sets up the database query, user ID stuff.
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // Hard coded for testing purposes
-        senderId = "1234"
-        senderDisplayName = "Khadgar"
+        sender = UserDefaults.standard.string(forKey: "username")
+        print("Sender in messagingchildviewcontroller is: ")
+        print(String(describing: sender))
         
         inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        // Do any additional setup after loading the view, typically from a nib.
-        let query = Constants.refs.databaseChats.queryLimited(toLast: 10)
+        // Gets the currently logged in user for this session's information.
+        let user = Auth.auth().currentUser
+        if let user = user {
+            NSLog(user.email!)
+            
+            print("USER ID FOR user: \(user.email) IS \(user.uid)")
+            senderId = user.uid
+            senderDisplayName = sender
+            
+            /* Since Firebase only allows one SELECT query at the same time,
+             conversations are organized by the conversationId, a combination
+             of the two users messaging each other with the lexographically
+             first user being the first Id. */
+            let names = [contactName!, sender!]
+            let sortedNames = names.sorted(by: <)
+            conversationId = sortedNames[0] + sortedNames[1]
+            print("Generated conversationId: \(String(describing: conversationId))")
+        }
         
+        
+        /* Debug */
+        //NSLog("User ID: " + senderId! + "/n Username: " + senderDisplayName! + "/n Recipient: " + contactName! + "/n ContactId: " + contactName!)
+        
+        // Query the database and create JSQMessage objects with the results.
+        let query = Constants.refs.databaseChats.queryOrdered(byChild: "conversationId").queryEqual(toValue : conversationId)
         _ = query.observe(.childAdded, with: { [weak self] snapshot in
             if  let data        = snapshot.value as? [String: String],
                 let id          = data["sender_id"],
                 let name        = data["name"],
                 let text        = data["text"],
-                !text.isEmpty
-            {
-                if let message = JSQMessage(senderId: id, displayName: name, text: text)
-                {
+                !text.isEmpty {
+                if let message = JSQMessage(senderId: id, displayName: name, text: text) {
                     self?.messages.append(message)
                     self?.finishReceivingMessage()
                 }
             }
         })
     }
+    
+    // Returns the index path of the messages.
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData!
     {
         return messages[indexPath.item]
     }
     
+    // Returns the number of messages.
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return messages.count
@@ -67,6 +92,9 @@ class MessagingChildViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource!
     {
+        let fullName = UserDefaults.standard.string(forKey: "username")
+        let nameArray = fullName!.split {$0 == " "}
+        let firstName = nameArray[0]
         return messages[indexPath.item].senderId == senderId ? outgoingBubble: incomingBubble
     }
     
@@ -88,12 +116,23 @@ class MessagingChildViewController: JSQMessagesViewController {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
     
+    // Sends a message to the database.
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
     {
         let ref = Constants.refs.databaseChats.childByAutoId()
-        let message = ["sender_id": senderId, "name": senderDisplayName, "text": text]
+        let message = ["conversationId": conversationId, "sender_id": senderId, "name": senderDisplayName, "text": text]
         ref.setValue(message)
         finishSendingMessage()
+    }
+    
+    // Passses sender back and forth to the contacts table.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "returnToContactsTransition" {
+            if let contactsVC = segue.destination as? ContactsTableViewController {
+                //Some property on contactsVC that needs to be set
+                contactsVC.sender = self.sender
+            }
+        }
     }
 }
 
